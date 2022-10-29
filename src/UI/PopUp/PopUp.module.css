@@ -1,0 +1,27 @@
+.PopUp {
+    background-color: rgba(0,0,0,0.4);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+   
+}
+
+.PopUp.active {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PopUpContent {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 33vw;
+    height: 33vh;
+    background-color: #fff;
+    border-radius: 30px;
+
+}
