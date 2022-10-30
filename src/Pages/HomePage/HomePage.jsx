@@ -3,8 +3,8 @@ import MyInput from '../../UI/MyInput/MyInput'
 import styles from './HomePage.module.css'
 
 export default function HomePage() {
-    const addCssClass = (style) => {
-       return [style, styles.header__item].join(' ')
+    const addCssClass = (style1, style2) => {
+       return [style1, style2].join(' ')
         
     }
         
@@ -13,31 +13,31 @@ export default function HomePage() {
   return (
     <div>
         <header className={styles.header}>
-            <div className={styles.container}>
+            <div className={styles.header__container}>
                 <div className={styles.header__template}>
-                    <div className={addCssClass(styles.inf1)}>
+                    <div className={addCssClass(styles.inf1, styles.header__item)}>
                     some info
                     </div>
 
-                    <div className={addCssClass(styles.inf2)}>
+                    <div className={addCssClass(styles.inf2, styles.header__item)}>
                     some info
                     </div>
 
-                    <div className={addCssClass(styles.inf3)}>
+                    <div className={addCssClass(styles.inf3, styles.header__item)}>
                     some info
                     </div>
 
-                    <div className={addCssClass(styles.inf4)}>
+                    <div className={addCssClass(styles.inf4, styles.header__item)}>
                     some info
                     </div>
 
                     
-                    <div className={addCssClass(styles.burger)}>burger</div>
-                    <h1 className={addCssClass(styles.logo)}>logo</h1>
-                    <MyInput classes={addCssClass(styles.input)} placeholder = 'hello'/>
-                    <div className={addCssClass(styles.adress)}>adresses</div>
-                    <div className={addCssClass(styles.sign)}>Sign in</div>
-                    <div className={addCssClass(styles.basket)}>Shoppingcart</div>
+                    <div className={addCssClass(styles.burger, styles.header__item)}>burger</div>
+                    <h1 className={addCssClass(styles.logo, styles.header__item)}>logo</h1>
+                    <MyInput classes={addCssClass(styles.input, styles.header__item)} placeholder = 'hello'/>
+                    <div className={addCssClass(styles.adress, styles.header__item)}>adresses</div>
+                    <div className={addCssClass(styles.sign, styles.header__item)}>Sign in</div>
+                    <div className={addCssClass(styles.basket, styles.header__item)}>Shoppingcart</div>
                    
 
                 </div>
@@ -45,35 +45,41 @@ export default function HomePage() {
             </div>
                 
             <div className={styles.slider__box}>
-                <div className='container'>
-                    <div className='slider'>
-                        <img src="" alt="" />
-                        <div className="dots"></div>
-                    </div>
+                
+                    <div className={styles.slider}>
+                    
+                    </div> 
+               
+
+                <div className={styles.dots}>
+                        <div className={styles.dot}></div>
+                        <div className={styles.dot}></div>
                 </div>
             </div>
             
         </header>
         
+        <div className={styles.space}></div>
         
-        <div className='container'>
-            <div className='prod__list'>
+        <div className={styles.prod__list}>
+            
+            <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                fghfghfhfh</div>
 
-                <div className="prod__item"></div>
+            <div className="adds">fhfhgfhfhfgh</div>
 
-                <div className="adds"></div>
+            <div className="prod__item">fhfhgfhfhgf</div>
 
-                <div className="prod__item"></div>
+            <div className="adds">fhgfhfhfghf</div>
 
-                <div className="adds"></div>
+            <div className="prod__arr">array</div>
 
-                <div className="prod__item">array</div>
-
-            </div>
+            
         </div>
 
         <div className="container">
-            <div className="footer"></div>
+            <div className="footer">gdfgd</div>
         </div>
     </div>
   )
