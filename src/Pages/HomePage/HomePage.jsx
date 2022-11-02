@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 import MyInput from '../../UI/MyInput/MyInput'
+import PopUp from '../../UI/PopUp/PopUp'
 import styles from './HomePage.module.css'
 
 export default function HomePage() {
+    let [visible, setVisible] = useState('false')
+
     const addCssClass = (style1, style2) => {
        return [style1, style2].join(' ')
         
@@ -12,6 +15,7 @@ export default function HomePage() {
 
   return (
     <div>
+        
         <header className={styles.header}>
             <div className={styles.header__container}>
                 <div className={styles.header__template}>
@@ -65,21 +69,93 @@ export default function HomePage() {
             
             <div className={styles.prod__item}>
                 <div className={styles.image}></div>
-                fghfghfhfh</div>
+                <div className={styles.price}>228</div>
 
-            <div className="adds">fhfhgfhfhfgh</div>
+                <div className={styles.sale}>322</div>
 
-            <div className="prod__item">fhfhgfhfhgf</div>
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
 
-            <div className="adds">fhgfhfhfghf</div>
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
 
-            <div className="prod__arr">array</div>
+                <div className={styles.sale}>322</div>
 
-            
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
+
+                <div className={styles.sale}>322</div>
+
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
+
+                <div className={styles.sale}>322</div>
+
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
+
+                <div className={styles.sale}>322</div>
+
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
+
+                <div className={styles.sale}>322</div>
+
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
+
+                <div className={styles.sale}>322</div>
+
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
+             <div className={styles.prod__item}>
+                <div className={styles.image}></div>
+                <div className={styles.price}>228</div>
+
+                <div className={styles.sale}>322</div>
+
+                <div className={styles.description}>Pants 4 u</div>
+            </div>
+
         </div>
 
-        <div className="container">
-            <div className="footer">gdfgd</div>
+        <div className={styles.reccomend__box}>
+            <div className={styles.reccomend}></div>
+            <div className={styles.reccomend}></div>
+        </div>
+             <button onClick={() => setVisible(true)}>123</button>
+            <PopUp 
+            visible={visible}
+            setVisible= {setVisible}
+            >
+                1231123
+            </PopUp>
+        <div className={styles.arr__bg}></div>
+        <div className={styles.footer__bg}>
+           
+            <div className={styles.footer__box}>gdfgd</div>
         </div>
     </div>
   )

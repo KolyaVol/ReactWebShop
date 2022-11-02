@@ -5,7 +5,6 @@ import MySelect from '../UI/MySelect/MySelect';
 import PostList from './PostList';
 import { usePosts } from '../hooks/usePosts';
 import getPageCount, { getPagesArray } from '../pages';
-import { Link, Router } from 'react-router-dom';
 export default function Posts() {
 
     let [ posts, setPosts] = useState([])

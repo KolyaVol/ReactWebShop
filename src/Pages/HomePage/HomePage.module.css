@@ -18,7 +18,7 @@ body {
     top: 0;
     background-color: royalblue;
     width: 100vw;
-   height: 20vh;
+    height: 20vh;
 }
 
 .inf1 {
@@ -93,8 +93,7 @@ body {
     background-color: #fff;
     border-radius: 2em;
     height: 40vh;
-    
-    width: 100%;
+    width: 98.8vw;
 }
 
 .slider {
@@ -132,7 +131,8 @@ body {
     width: 70vw;
     height: 50vh;
     justify-content: center;
-    background-color: darkblue;
+    
+    flex-wrap: wrap;
     
 }
 
@@ -141,21 +141,82 @@ body {
     grid-template-columns: repeat(3, 1rf);
     grid-template-rows: 10rem 2rem 2rem;
     grid-template-areas: 
-    'a a a'
-    'b c .'
-    'd d d';
+    'img img img'
+    'pr sl sl'
+    'descr descr descr';
     border-radius: 2rem;
     height: 14rem;
     width: 10rem;
+    font-size: 1.4rem;
+    margin: 1rem;
 }
 
 .image {
     border-top-left-radius: 0.7rem;
     border-top-right-radius: 0.7rem;
-    background-color: #fff;
+    background-color: cornflowerblue;
     width: 100%;
-    grid-area: a;
+    grid-area: img;
+}
+
+.price {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    grid-area: pr;
+    
+}
+
+.sale {
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    grid-area: sl;
+    text-decoration: line-through;
+}
+
+.description {
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    grid-area: descr;
+}
+
+.reccomend__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 4rem auto 2rem auto;
+    width: 70vw;
+    height: 26vh;
+   
+}
+
+.reccomend {
+    display: block;
+    border-radius: 3rem;
+    background-color: rgb(105, 95, 95);
+    height: 25vh;
+    width: 34vw;
 }
 
 
 
+
+.footer__bg {
+    display: grid;
+    grid-template-columns: 1px 70vh;
+    justify-content: start;
+    width: 100%;
+    height: 60vh;
+    margin-top: 0;
+    background-color: cornflowerblue;
+}
+
+.footer__box {
+    display: flex;
+    justify-content: space-between;
+    width: 70vw;
+    margin-top: 4rem;
+}
