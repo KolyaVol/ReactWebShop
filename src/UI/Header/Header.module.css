@@ -1,0 +1,118 @@
+.header__container {
+    display: grid;
+    justify-content: start;
+    margin: 1rem 10vw 1rem 10vw;
+    width: 80vw;
+
+}
+
+.header {
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: royalblue;
+    width: 100vw;
+    height: 20vh;
+}
+
+.inf1 {
+    grid-area: inf1;
+    background-color: red;
+    color: brown;
+}
+
+.inf2 {
+    grid-area: inf2;
+}
+
+.inf3 {
+    grid-area: inf3;
+}
+
+.inf4 {
+    grid-area: inf4;
+}
+
+.burger {
+    grid-area: burger;
+}
+
+.logo {
+    align-self: center;
+    grid-area: logo;
+    text-decoration: none;
+}
+
+.input {
+    height: 3em;
+    grid-area: input;
+    width: 90%;
+}
+
+.adress {
+    grid-area: adress;
+}
+
+.sign {
+    grid-area: sign;
+}
+
+.basket {
+    grid-area: basket;
+}
+
+
+.header__template {
+    display: grid;
+    font-size: 1.4rem;
+    grid-gap: 1em;
+    justify-content: start;
+    grid-template-columns: 1fr 4fr 4fr 20fr 2fr 3fr 2fr;
+    grid-template-rows: 2em 2em;
+    grid-template-areas:
+        'inf1 inf2 inf3 inf4 . . . '
+        'burger logo input input adress sign basket';
+    align-items: center;
+
+}
+
+.header__item {
+    border: 1px solid blue;
+}
+
+.slider__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 2em;
+    height: 40vh;
+    width: 98.8vw;
+}
+
+.slider {
+    background-color: red;
+    width: 70vw;
+    height: 45vh;
+    border-radius: 3rem;
+    margin-top: 3rem;
+
+}
+
+
+.dots {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1rem 1rem;
+    grid-gap: .7rem;
+    margin-top: 1rem;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: blue;
+    height: 1rem;
+    width: 1rem;
+}
+

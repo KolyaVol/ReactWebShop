@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom'
 import MyInput from '../MyInput/MyInput'
 import PopUp from '../PopUp/PopUp'
 import styles from './Header.module.css'
@@ -15,29 +16,33 @@ export default function Header() {
         <header className={styles.header}>
             <div className={styles.header__container}>
                 <div className={styles.header__template}>
+    
                     <div className={addCssClass(styles.inf1, styles.header__item)}>
-                    some info
+                    money
                     </div>
 
                     <div className={addCssClass(styles.inf2, styles.header__item)}>
-                    some info
+                    city
                     </div>
 
                     <div className={addCssClass(styles.inf3, styles.header__item)}>
-                    some info
+                    delivery
                     </div>
 
                     <div className={addCssClass(styles.inf4, styles.header__item)}>
-                    some info
+                    sell smth
                     </div>
 
-                    <PopUp>
-                        
+                    <PopUp 
+                        visible={visible}
+                        setVisible= {setVisible}
+                        >
+                        1231123
                     </PopUp>
                     <div className={addCssClass(styles.burger, styles.header__item)}>burger</div>
 
 
-                    <h1 className={addCssClass(styles.logo, styles.header__item)}>logo</h1>
+                    <Link className={addCssClass(styles.logo, styles.header__item)}>logo</Link>
 
 
                     <MyInput classes={addCssClass(styles.input, styles.header__item)} placeholder = 'hello'/>
@@ -46,10 +51,10 @@ export default function Header() {
                     <div className={addCssClass(styles.adress, styles.header__item)}>adresses</div>
 
 
-                    <div className={addCssClass(styles.sign, styles.header__item)}>Sign in</div>
+                    <Link to={'/Login'} className={addCssClass(styles.sign, styles.header__item)}>Sign in</Link>
 
 
-                    <div className={addCssClass(styles.basket, styles.header__item)}>Shoppingcart</div>
+                    <Link to={'cart'} className={addCssClass(styles.basket, styles.header__item)}>Shoppingcart</Link>
                    
 
                 </div>
@@ -60,9 +65,8 @@ export default function Header() {
                 
                     <div className={styles.slider}>
                     
-                    </div> 
-               
-
+            </div> 
+                <button onClick={() => setVisible(true)}>123</button>
                 <div className={styles.dots}>
                         <div className={styles.dot}></div>
                         <div className={styles.dot}></div>
