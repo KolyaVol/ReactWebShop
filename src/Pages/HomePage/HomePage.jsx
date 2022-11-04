@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import Header from '../../UI/Header/Header'
-import MyInput from '../../UI/MyInput/MyInput'
-import PopUp from '../../UI/PopUp/PopUp'
+import HomeSlider from '../../UI/HomeSlider/HomeSlider'
 import styles from './HomePage.module.css'
 
 export default function HomePage() {
@@ -15,8 +14,10 @@ export default function HomePage() {
     <div>
         
         <Header></Header>
+
+        <HomeSlider/>
         
-        <div className={styles.space}></div>
+       
         
         <div className={styles.prod__list}>
             

@@ -1,0 +1,36 @@
+.slider__box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    border-radius: 2em;
+    height: 40vh;
+    width: 99.1vw;
+    margin-top: 9rem;
+}
+
+.slider {
+    background-color: red;
+    width: 70vw;
+    height: 45vh;
+    border-radius: 3rem;
+    margin-top: 3rem;
+
+}
+
+
+.dots {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 1rem 1rem;
+    grid-gap: .7rem;
+    margin-top: 1rem;
+}
+
+.dot {
+    border-radius: 50%;
+    background-color: blue;
+    height: 1rem;
+    width: 1rem;
+}

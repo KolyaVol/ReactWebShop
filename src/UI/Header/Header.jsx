@@ -39,7 +39,7 @@ export default function Header() {
                         >
                         1231123
                     </PopUp>
-                    <div className={addCssClass(styles.burger, styles.header__item)}>burger</div>
+                    <div onClick={() => setVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>burger</div>
 
 
                     <Link className={addCssClass(styles.logo, styles.header__item)}>logo</Link>
@@ -61,16 +61,9 @@ export default function Header() {
 
             </div>
                 
-            <div className={styles.slider__box}>
+            <div className={styles.bottom__white}>
                 
-                    <div className={styles.slider}>
-                    
-            </div> 
-                <button onClick={() => setVisible(true)}>123</button>
-                <div className={styles.dots}>
-                        <div className={styles.dot}></div>
-                        <div className={styles.dot}></div>
-                </div>
+                
             </div>
             
         </header>
