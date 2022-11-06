@@ -4,69 +4,6 @@ body {
     font-size: 10px;
 }
 
- .space {
-     height: 60vh;
-     width: 50vw;
- }
-
-.prod__list {
-    margin: auto;
-    display: flex;
-    width: 70vw;
-    height: 50vh;
-    justify-content: center;
-    
-    flex-wrap: wrap;
-    
-}
-
-.prod__item {
-    display: grid;
-    grid-template-columns: repeat(3, 1rf);
-    grid-template-rows: 10rem 2rem 2rem;
-    grid-template-areas: 
-    'img img img'
-    'pr sl sl'
-    'descr descr descr';
-    border-radius: 2rem;
-    height: 14rem;
-    width: 10rem;
-    font-size: 1.4rem;
-    margin: 1rem;
-}
-
-.image {
-    border-top-left-radius: 0.7rem;
-    border-top-right-radius: 0.7rem;
-    background-color: cornflowerblue;
-    width: 100%;
-    grid-area: img;
-}
-
-.price {
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    grid-area: pr;
-    
-}
-
-.sale {
-    display: block;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
-    grid-area: sl;
-    text-decoration: line-through;
-}
-
-.description {
-    display: block;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    grid-area: descr;
-}
-
 .reccomend__box {
     display: flex;
     justify-content: space-between;

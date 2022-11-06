@@ -1,0 +1,17 @@
+.reccomend__box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem auto 2rem auto;
+    width: 70vw;
+    height: 26vh;
+
+}
+
+.recommend {
+    display: block;
+    border-radius: 3rem;
+    background-color: rgb(83, 124, 236);
+    height: 25vh;
+    width: 34vw;
+}
