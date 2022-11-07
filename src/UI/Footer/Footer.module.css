@@ -1,0 +1,17 @@
+.footer__bg {
+    display: flex;
+    grid-template-columns: 70vh;
+    justify-content: center;
+    width: 100%;
+    height: 40vh;
+    margin-top: 0;
+    background-color: cornflowerblue;
+}
+
+.footer__box {
+    display: flex;
+    text-align: center;
+    width: 70vw;
+    margin-top: 4rem;
+    font-size: 1.5rem;
+}

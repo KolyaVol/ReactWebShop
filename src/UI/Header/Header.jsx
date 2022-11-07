@@ -42,7 +42,7 @@ export default function Header() {
                     <div onClick={() => setVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>burger</div>
 
 
-                    <Link className={addCssClass(styles.logo, styles.header__item)}>logo</Link>
+                    <Link className={addCssClass(styles.logo, styles.header__item)}>WEBSHOP</Link>
 
 
                     <MyInput classes={addCssClass(styles.input, styles.header__item)} placeholder = 'hello'/>

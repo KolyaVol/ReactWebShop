@@ -24,8 +24,6 @@ export default function HomeSlider() {
             alt='prod'
             />
           )}
-            <img src={ha} className={styles.slider__item1} alt='ha'/>
-            <img src={ah} className={styles.slider__item2} alt='ah'/>
         </div> 
                
         <div className={styles.dots}>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import Footer from '../../UI/Footer/Footer'
 import Header from '../../UI/Header/Header'
 import HomeSlider from '../../UI/HomeSlider/HomeSlider'
 import ProdList from '../../UI/ProdList/ProdList'
@@ -24,11 +25,8 @@ export default function HomePage() {
         <RecBox/>
 
         <ProdList></ProdList>
-        <div className={styles.arr__bg}></div>
-        <div className={styles.footer__bg}>
-           
-            <div className={styles.footer__box}>gdfgd</div>
-        </div>
+        
+        <Footer/>
     </div>
   )
 }
