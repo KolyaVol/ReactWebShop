@@ -6,9 +6,10 @@ import styles from './Header.module.css'
 
 export default function Header() {
     let [visible, setVisible] = useState(false)
+    let [currChoice, setCurrChoice] = useState(false)
 
-    const addCssClass = (style1, style2) => {
-       return [style1, style2].join(' ')
+    const addCssClass = (style1, style2,...args) => {
+       return [style1, style2, args].join(' ')
     }
 
   return (
@@ -17,8 +18,16 @@ export default function Header() {
             <div className={styles.header__container}>
                 <div className={styles.header__template}>
     
-                    <div className={addCssClass(styles.inf1, styles.header__item)}>
-                    money
+                    <div onMouseEnter={e => setCurrChoice(true)} onMouseLeave={e => setCurrChoice(false)} className={addCssClass(styles.currency, styles.header__item)}>
+                    {currChoice
+                    ?
+                    <p>money
+                        <div className={styles.curr__ChoiceBox}></div>
+                    </p>
+                    :
+                    <p>money</p>
+                    }
+
                     </div>
 
                     <div className={addCssClass(styles.inf2, styles.header__item)}>

@@ -8,6 +8,12 @@
 
 }
 
+.prods__title {
+    font-size: 2rem;
+    font-family: 'Titan One', cursive;
+    margin-left: 15vw;
+}
+
 .prod__item {
     display: grid;
     grid-template-columns: repeat(3, 1rf);

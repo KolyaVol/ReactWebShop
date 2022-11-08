@@ -1,12 +1,16 @@
 .header__container {
     display: grid;
     justify-content: start;
-    margin: 1rem 10vw 1rem 10vw;
-    width: 80vw;
+    margin: 1rem;
+    width: 70vw;
     
 }
 
 .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
     position: absolute;
     left: 0;
     top: 0;
@@ -16,10 +20,20 @@
     
 }
 
-.inf1 {
+.currency {
     grid-area: inf1;
     background-color: red;
     color: brown;
+}
+
+.curr__ChoiceBox {
+    position: absolute;
+    top: 6rem;
+    height: 10rem;
+    width: 10rem;
+    background-color: #fff;
+    border-radius: 1rem;
+    z-index: 100;
 }
 
 .inf2 {
@@ -85,11 +99,12 @@
 }
 
 .bottom__white {
-    
+    position: relative;
+    left: -0.4rem;
     background-color: #fff;
     border-radius: 2rem 2rem 0 0;
     height: 5vh;
-    width: 99.15%;
+    width: 99.9vw;
 }
 
 

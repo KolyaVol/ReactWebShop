@@ -23,7 +23,7 @@ export default function ProdList() {
 
   return (
     <div>
-        <h1>Хиты продаж</h1>
+        <p className={styles.prods__title}>Хиты продаж</p>
         <div className={styles.prod__list}>
             {prods.map(prod =>
                 <div key={prod.id + 'prod'} className={styles.prod__item}>

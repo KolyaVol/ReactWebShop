@@ -8,6 +8,7 @@
     height: 40vh;
     width: 100vw;
     margin:  9rem 0 2rem;
+    z-index: 1;
 }
 
 .slider {
