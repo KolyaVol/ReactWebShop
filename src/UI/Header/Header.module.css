@@ -22,18 +22,55 @@
 
 .currency {
     grid-area: inf1;
-    background-color: red;
-    color: brown;
+    
+   
 }
 
-.curr__ChoiceBox {
+.currency:hover .currency__block {display: flex;}
+
+.currency__word {
+    font-size: 1.5rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    cursor: pointer;
+   
+}
+
+.currency__title {
+    margin: 0.7rem;
+    font-size: 1rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    cursor:default;
+}
+
+.currency__block {
     position: absolute;
-    top: 6rem;
-    height: 10rem;
-    width: 10rem;
+    display: none;
+    flex-direction: column;
+    text-align: left;
     background-color: #fff;
+    top: 4rem   ;
+    width: 15rem;
+    height: auto;
     border-radius: 1rem;
     z-index: 100;
+    border: black solid 1px;
+}
+
+.currency__item {
+    
+    font-size: 1.2rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+
+.currency__item:hover {
+    background-color: bisque;
+}
+
+.currency__item:last-child {
+    border-radius: 0 0 1rem 1rem;
 }
 
 .inf2 {

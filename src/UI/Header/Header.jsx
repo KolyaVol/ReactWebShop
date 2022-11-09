@@ -6,7 +6,7 @@ import styles from './Header.module.css'
 
 export default function Header() {
     let [visible, setVisible] = useState(false)
-    let [currChoice, setCurrChoice] = useState(false)
+    let [currChoice, setCurrChoice] = useState('BYN')
 
     const addCssClass = (style1, style2,...args) => {
        return [style1, style2, args].join(' ')
@@ -18,15 +18,14 @@ export default function Header() {
             <div className={styles.header__container}>
                 <div className={styles.header__template}>
     
-                    <div onMouseEnter={e => setCurrChoice(true)} onMouseLeave={e => setCurrChoice(false)} className={addCssClass(styles.currency, styles.header__item)}>
-                    {currChoice
-                    ?
-                    <p>money
-                        <div className={styles.curr__ChoiceBox}></div>
-                    </p>
-                    :
-                    <p>money</p>
-                    }
+                    <div className={addCssClass(styles.currency, styles.header__item)}>
+                        <p className={styles.currency__word}>{currChoice}</p>
+                        <div className={styles.currency__block}>
+                            <p className={styles.currency__title}>Выберите валюту</p>
+                            <div onClick={() => setCurrChoice('BYN')} className={styles.currency__item}>BYN  Белорусские рубли</div>
+                            <div onClick={() => setCurrChoice('RUB')} className={styles.currency__item}>RUB Российские рубли</div>
+                            <div onClick={() => setCurrChoice('USD')} className={styles.currency__item}>USD Доллар США</div>
+                        </div>
 
                     </div>
 
