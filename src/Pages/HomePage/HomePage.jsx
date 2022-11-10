@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Footer from '../../UI/Footer/Footer'
 import Header from '../../UI/Header/Header'
 import HomeSlider from '../../UI/HomeSlider/HomeSlider'
@@ -14,7 +14,7 @@ export default function HomePage() {
     
 
   return (
-    <div>
+    <div className={styles.body}>
         
         <Header></Header>
 

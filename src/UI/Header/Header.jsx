@@ -1,11 +1,13 @@
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
+import Map from '../Map/Map'
 import MyInput from '../MyInput/MyInput'
 import PopUp from '../PopUp/PopUp'
 import styles from './Header.module.css'
 
 export default function Header() {
-    let [visible, setVisible] = useState(false)
+    let [burgerVisible, setBurgerVisible] = useState(false)
+    let [mapVisible, setMapVisible] = useState(false)
     let [currChoice, setCurrChoice] = useState('BYN')
 
     const addCssClass = (style1, style2,...args) => {
@@ -30,7 +32,14 @@ export default function Header() {
                     </div>
 
                     <div className={addCssClass(styles.inf2, styles.header__item)}>
-                    city
+                       <PopUp 
+                        visible = {mapVisible}
+                        setVisible = {setMapVisible}
+                        position = 'centered'
+                        >
+                        <Map></Map>
+                    </PopUp>
+                    <div onClick={() => setMapVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>City</div>
                     </div>
 
                     <div className={addCssClass(styles.inf3, styles.header__item)}>
@@ -42,12 +51,13 @@ export default function Header() {
                     </div>
 
                     <PopUp 
-                        visible={visible}
-                        setVisible= {setVisible}
+                        visible = {burgerVisible}
+                        setVisible = {setBurgerVisible}
+                        position = 'left'
                         >
                         1231123
                     </PopUp>
-                    <div onClick={() => setVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>burger</div>
+                    <div onClick={() => setBurgerVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>burger</div>
 
 
                     <Link className={addCssClass(styles.logo, styles.header__item)}>WEBSHOP</Link>
@@ -73,7 +83,7 @@ export default function Header() {
                 
                 
             </div>
-            
+           
         </header>
     </div>
   )

@@ -1,0 +1,25 @@
+.zero {
+    position:relative;
+    overflow:hidden;
+}
+.first {
+    color:#eee;
+    font-size:12px;
+    position:absolute;
+    top:0px;
+}
+
+.second {
+    color:#eee;
+    font-size:12px;
+    position:absolute;
+    top:14px;
+}
+
+.third {
+    position:relative;
+    width: 50vw;
+    height: 50vh;
+    border-radius: 2rem;
+    
+}
