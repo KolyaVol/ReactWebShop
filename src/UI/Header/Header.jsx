@@ -4,6 +4,7 @@ import Map from '../Map/Map'
 import MyInput from '../MyInput/MyInput'
 import PopUp from '../PopUp/PopUp'
 import styles from './Header.module.css'
+import {SlMenu} from 'react-icons/sl'
 
 export default function Header() {
     let [burgerVisible, setBurgerVisible] = useState(false)
@@ -57,10 +58,10 @@ export default function Header() {
                         >
                         1231123
                     </PopUp>
-                    <div onClick={() => setBurgerVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>burger</div>
+                    <div onClick={() => setBurgerVisible(true)} className={addCssClass(styles.burger, styles.header__item)}><SlMenu /></div>
 
 
-                    <Link className={addCssClass(styles.logo, styles.header__item)}>WEBSHOP</Link>
+                    <Link to={'/webshop'} className={addCssClass(styles.logo, styles.header__item)}>WEBSHOP</Link>
 
 
                     <MyInput classes={addCssClass(styles.input, styles.header__item)} placeholder = 'hello'/>
@@ -72,7 +73,7 @@ export default function Header() {
                     <Link to={'/Login'} className={addCssClass(styles.sign, styles.header__item)}>Sign in</Link>
 
 
-                    <Link to={'cart'} className={addCssClass(styles.basket, styles.header__item)}>Shoppingcart</Link>
+                    <Link to={'/cart'} className={addCssClass(styles.basket, styles.header__item)}>Shoppingcart</Link>
                    
 
                 </div>

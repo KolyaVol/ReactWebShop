@@ -87,6 +87,8 @@
 
 .burger {
     grid-area: burger;
+    display: flex;
+    justify-content: center;
 }
 
 .logo {
