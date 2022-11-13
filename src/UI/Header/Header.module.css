@@ -21,7 +21,7 @@
 }
 
 .currency {
-    grid-area: inf1;
+    grid-area: curr;
     
    
 }
@@ -73,22 +73,24 @@
     border-radius: 0 0 1rem 1rem;
 }
 
-.inf2 {
-    grid-area: inf2;
+.city {
+    display: flex;
+    justify-content: center;
+    grid-area: city;
+    cursor: pointer;
+    font-family: 'Titan One', cursive;
 }
 
-.inf3 {
-    grid-area: inf3;
-}
-
-.inf4 {
-    grid-area: inf4;
+.sell {
+    grid-area: sell;
+    font-family: 'Titan One', cursive;
 }
 
 .burger {
     grid-area: burger;
     display: flex;
     justify-content: center;
+    cursor: pointer;
 }
 
 .logo {
@@ -106,16 +108,16 @@
     width: 90%;
 }
 
-.adress {
-    grid-area: adress;
-}
-
 .sign {
     grid-area: sign;
+    text-decoration: none;
+    color: #fff;
 }
 
 .basket {
     grid-area: basket;
+    text-decoration: none;
+    color: #fff;
 }
 
 
@@ -127,14 +129,16 @@
     grid-template-columns: 1fr 4fr 4fr 20fr 2fr 3fr 2fr;
     grid-template-rows: 2em 2em;
     grid-template-areas:
-        'inf1 inf2 inf3 inf4 . . . '
-        'burger logo input input adress sign basket';
+        'curr city sell . . . . '
+        'burger logo input input input sign basket';
     align-items: center;
 
 }
 
 .header__item {
-    border: 1px solid blue;
+    color: #fff;
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
 }
 
 .bottom__white {

@@ -40,14 +40,10 @@ export default function Header() {
                         >
                         <Map></Map>
                     </PopUp>
-                    <div onClick={() => setMapVisible(true)} className={addCssClass(styles.burger, styles.header__item)}>City</div>
+                    <div onClick={() => setMapVisible(true)} className={addCssClass(styles.city, styles.header__item)}>Minsk</div>
                     </div>
 
-                    <div className={addCssClass(styles.inf3, styles.header__item)}>
-                    delivery
-                    </div>
-
-                    <div className={addCssClass(styles.inf4, styles.header__item)}>
+                    <div className={addCssClass(styles.sell, styles.header__item)}>
                     sell smth
                     </div>
 
@@ -67,7 +63,7 @@ export default function Header() {
                     <MyInput classes={addCssClass(styles.input, styles.header__item)} placeholder = 'hello'/>
 
 
-                    <div className={addCssClass(styles.adress, styles.header__item)}>adresses</div>
+                    
 
 
                     <Link to={'/Login'} className={addCssClass(styles.sign, styles.header__item)}>Sign in</Link>

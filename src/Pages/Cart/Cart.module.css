@@ -1,5 +1,44 @@
+.Cart {
+    margin: 14rem 0 5rem;
+    min-height: 33vh;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    margin: 12rem 15vw;
+    height: 50vh;
+}
+
+.title {
+    margin: 1rem 0 ;
+    font-size: 1.6rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: bold;
+}
+
+.subtitle {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: rgba(0, 0, 0, 0.3);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.link {
+    font-size: 1.2rem;
+    background-color: cornflowerblue;
+    border-radius: 1rem;
+    padding: 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+
 .prod__list {
-    margin: auto;
+    margin: 2rem 0 ;
     display: flex;
     width: 70vw;
     min-height: 50vh;
@@ -30,7 +69,8 @@
 }
 
 .image {
-    border-radius: 0.7rem;
+    border-top-left-radius: 0.7rem;
+    border-top-right-radius: 0.7rem;
     background-color: cornflowerblue;
     width: 100%;
     grid-area: img;
