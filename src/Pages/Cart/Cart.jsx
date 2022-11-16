@@ -25,8 +25,6 @@ export default function Cart() {
     
     ])
 
-    
-
   return (
     <div className={styles.container}>
         <div className={styles.title}>В корзине пока пусто</div>
@@ -45,13 +43,8 @@ export default function Cart() {
 
                     <div className={styles.name}>{prod.name}</div>
                 </div>
-
                 :
                 ''
-        
-                
-                
-           
                 )}
 
             

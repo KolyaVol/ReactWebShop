@@ -11,7 +11,10 @@ export default function RecBox() {
     <div>
         <div className={styles.reccomend__box}>
             {rec.map(p =>
-                <div key={p.id + 'recBox'} className={styles.recommend}></div>
+                <div key={p.id + 'recBox'} className={styles.recommend}>
+                  <div className={styles.content}></div>
+                  <div className={styles.shadow}></div>
+                </div>
                 )}
         </div>
     </div>

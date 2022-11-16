@@ -69,8 +69,7 @@
 }
 
 .image {
-    border-top-left-radius: 0.7rem;
-    border-top-right-radius: 0.7rem;
+    border-radius: 0.7rem;
     background-color: cornflowerblue;
     width: 100%;
     grid-area: img;

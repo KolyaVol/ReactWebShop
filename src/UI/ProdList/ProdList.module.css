@@ -27,6 +27,7 @@
     width: 10rem;
     font-size: 1.4rem;
     margin: 1rem;
+
 }
 
 .image {
@@ -41,6 +42,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
     grid-area: pr;
+    
 
 }
 
@@ -58,4 +60,7 @@
     color: gainsboro;
     font-family: Georgia, 'Times New Roman', Times, serif;
     grid-area: descr;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
