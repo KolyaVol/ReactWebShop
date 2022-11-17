@@ -1,9 +1,11 @@
-import React from 'react'
-import styles from './MyInput.module.css'
+import React from "react";
+import styles from "./MyInput.module.css";
 
-export default function MyInput({value, ...props}) {
+export default function MyInput({ value, ...props }) {
   return (
-    <input className={[styles.MyInput, props.classes].join(' ')}  {...props}></input>
-  )
+    <input
+      className={[styles.MyInput, props.classes].join(" ")}
+      {...props}
+    ></input>
+  );
 }
- 

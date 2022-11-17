@@ -1,8 +1,7 @@
-import React from 'react'
+import React from "react";
 
 export default function About() {
-
-/*<Route path="/about">
+  /*<Route path="/about">
           <About/>
         </Route>
       <div>{count}</div>
@@ -18,7 +17,5 @@ export default function About() {
         <MyInput/>
         <MyInput/>
         <MyButton/>*/
-  return (
-    <h1>This page tells abous this app</h1>
-  )
+  return <h1>This page tells abous this app</h1>;
 }
