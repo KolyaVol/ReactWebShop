@@ -72,10 +72,9 @@ export default function Header() {
                 onClick={() => setCounter++}
                 className={addCssClass(styles.sell, styles.header__item)}
               >
-                <button onClick={() => setCounter(counter + 1)}>
-                  gdfggergeg
-                </button>
-                sell smth
+                <Link className={styles.header__item} to={"/addprod"}>
+                  Продавайте у нас
+                </Link>
               </div>
 
               <PopUp
