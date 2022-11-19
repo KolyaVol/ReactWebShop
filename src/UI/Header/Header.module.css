@@ -35,6 +35,7 @@
 }
 
 .currency__title {
+    color: rgb(85, 84, 84);
     margin: 0.7rem;
     font-size: 1rem;
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -57,7 +58,7 @@
 }
 
 .currency__item {
-    
+    color: rgb(85, 84, 84);
     font-size: 1.2rem;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     padding: 0.3rem 1rem;
