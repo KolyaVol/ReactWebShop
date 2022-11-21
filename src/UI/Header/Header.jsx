@@ -13,7 +13,7 @@ export default function Header() {
   let [mapVisible, setMapVisible] = useState(false);
   let [currChoice, setCurrChoice] = useState("BYN");
   let [counter, setCounter] = useState(0);
-  console.log(counter);
+  
 
   const addCssClass = (style1, style2, ...args) => {
     return [style1, style2, args].join(" ");
