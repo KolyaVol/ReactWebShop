@@ -12,32 +12,35 @@ export default function Login() {
      if (!isAuthorise) {
       localStorage.setItem("AUTH", "false")
      } 
-    
   }, []);
-  
 
-  function reg() {
-    localStorage.clear();
-    localStorage.setItem("AUTH", "true");
-  }
-
-  console.log(isAuthorise);
   let [hasAcc, setHasAcc] = useState(true);
+  let [name, setName] = useState('');
+
+const login = (event) => {
+  event.preventDefault();
+  localStorage.setItem("AUTH", "true");
+  localStorage.setItem("USERNAME", `${name}`);
+};
 
   const dispatch = useDispatch();
-  const isAuth = useSelector((state) => state.isAuth);
+  const userName = useSelector((state) => state.userName);
+console.log(userName);
 
   return (
     <div className={styles.Login}>
       {hasAcc ? (
-        <form className={styles.Login__form}>
+        <form onSubmit={login} className={styles.Login__form}>
           <div className={styles.title}>Войти или создать профиль</div>
           <div className={styles.subtitle}>Имя пользователя</div>
           <MyInput
             type="text"
             required
             placeholder="Введите свое имя пользователя"
-          ></MyInput>
+            onChange={e => setName(e.target.value)}
+          >
+           
+          </MyInput>
           <div className={styles.subtitle}>Пароль</div>
           <MyInput
             required
@@ -49,22 +52,21 @@ export default function Login() {
               Зарегистрироваться
             </MyButton>
 
-            <MyButton
-              onClick={() => reg()}
-            >
-              Войти
-            </MyButton>
+            <MyButton>Войти</MyButton>
           </div>
         </form>
       ) : (
-        <form className={styles.Login__form}>
+        <form onSubmit={login} className={styles.Login__form}>
           <div className={styles.title}>Войти или создать профиль</div>
           <div className={styles.subtitle}>Имя пользователя</div>
           <MyInput
             type="text"
             required
             placeholder="Введите свое имя пользователя"
-          ></MyInput>
+            onChange={e => setName(e.target.value)}
+          >
+           
+          </MyInput>
           <div className={styles.subtitle}>Пароль</div>
           <MyInput
             type="password"
@@ -81,7 +83,7 @@ export default function Login() {
 
             <Link className={styles.link} to={"/webshop"}>
               <MyButton
-                onClick={() => dispatch({ type: "AUTH", payload: true })}
+              //onClick={() => dispatch({ type: "AUTH", payload: true })}
               >
                 Зарегистрироваться
               </MyButton>

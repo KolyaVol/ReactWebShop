@@ -1,10 +1,10 @@
 import { configureStore } from '@reduxjs/toolkit'
 import { isAuthReducer } from './isAuthReducer'
-import { cash } from './cash'
+import { userName } from './userName'
 
 const reducer = {
   isAuth: isAuthReducer,
-  cash: cash
+  userName: userName
 }
 
 export const store = configureStore({reducer})
