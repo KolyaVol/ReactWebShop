@@ -1,7 +1,7 @@
 .header__container {
     display: grid;
     justify-content: start;
-    margin: 1rem;
+    margin: 1rem 1rem 6rem 1rem;
     width: 70vw;
     
 }
@@ -16,7 +16,7 @@
     top: 0;
     background-color: royalblue;
     width: 100vw;
-    min-height: 20vh;
+    min-height: 15rem;
     
 }
 
@@ -168,15 +168,5 @@
     font-size: 1.4rem;
     text-decoration: none;
 }
-
-.bottom__white {
-    position: relative;
-    left: -0.4rem;
-    background-color: #fff;
-    border-radius: 2rem 2rem 0 0;
-    height: 5vh;
-    width: 99.9vw;
-}
-
 
 

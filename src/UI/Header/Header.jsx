@@ -7,12 +7,16 @@ import styles from "./Header.module.css";
 import { SlMenu } from "react-icons/sl";
 import { BsCart3, BsFillPersonFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
+import { useSelector } from "react-redux";
 
 export default function Header() {
   let [burgerVisible, setBurgerVisible] = useState(false);
   let [mapVisible, setMapVisible] = useState(false);
   let [currChoice, setCurrChoice] = useState("BYN");
   let [counter, setCounter] = useState(0);
+
+  const userName = useSelector((state) => state.userName);
+  const isAuth = useSelector((state) => state.isAuth);
   
 
   const addCssClass = (style1, style2, ...args) => {
@@ -102,14 +106,23 @@ export default function Header() {
                 classes={addCssClass(styles.input, styles.header__item)}
                 placeholder="hello"
               />
-
-              <Link
-                to={"/Login"}
-                className={addCssClass(styles.sign, styles.header__item)}
-              >
-                <BsFillPersonFill />
-                <span className={styles.sign}>Войти</span>
-              </Link>
+              {!isAuth &&  !userName ? (
+                <Link
+                  to={"/login"}
+                  className={addCssClass(styles.sign, styles.header__item)}
+                >
+                  <BsFillPersonFill />
+                  <span className={styles.sign}>Войти</span>
+                </Link>
+              ) : (
+                <Link
+                  to={"/userPage"}
+                  className={addCssClass(styles.sign, styles.header__item)}
+                >
+                  <BsFillPersonFill />
+                  <span className={styles.sign}>{`${userName}`}</span>
+                </Link>
+              )}
 
               <Link
                 to={"/cart"}
@@ -121,8 +134,6 @@ export default function Header() {
               </Link>
             </div>
           </div>
-
-          <div className={styles.bottom__white}></div>
         </header>
       </IconContext.Provider>
     </div>

@@ -1,31 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./Login.module.css";
 import MyInput from "../../UI/MyInput/MyInput";
 import MyButton from "../../UI/MyButton/MyButton";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Login() {
+
+  let [hasAcc, setHasAcc] = useState(true);
+  let [name, setName] = useState("");
+
+  const dispatch = useDispatch();
+
   let isAuthorise = localStorage.getItem('AUTH') 
+
   useEffect(() => {
      if (!isAuthorise) {
       localStorage.setItem("AUTH", "false")
      } 
   }, []);
 
-  let [hasAcc, setHasAcc] = useState(true);
-  let [name, setName] = useState('');
-
 const login = (event) => {
   event.preventDefault();
   localStorage.setItem("AUTH", "true");
   localStorage.setItem("USERNAME", `${name}`);
+  dispatch({ type: "USERNAME", payload: `${name}` });
 };
-
-  const dispatch = useDispatch();
-  const userName = useSelector((state) => state.userName);
-console.log(userName);
 
   return (
     <div className={styles.Login}>
