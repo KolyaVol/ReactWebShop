@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Map from "../Map/Map";
 import MyInput from "../MyInput/MyInput";
@@ -7,7 +7,7 @@ import styles from "./Header.module.css";
 import { SlMenu } from "react-icons/sl";
 import { BsCart3, BsFillPersonFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 export default function Header() {
   let [burgerVisible, setBurgerVisible] = useState(false);
@@ -17,6 +17,18 @@ export default function Header() {
 
   const userName = useSelector((state) => state.userName);
   const isAuth = useSelector((state) => state.isAuth);
+
+  const dispatch = useDispatch(); 
+
+  let isAuthorise = localStorage.getItem("AUTH");
+
+  useEffect(() => {
+    if (!isAuthorise) {
+      localStorage.setItem("AUTH", "false");
+    } else {
+      dispatch({ type: "USERNAME", payload: localStorage.getItem('USERNAME') });
+    }
+  }, []);
   
 
   const addCssClass = (style1, style2, ...args) => {

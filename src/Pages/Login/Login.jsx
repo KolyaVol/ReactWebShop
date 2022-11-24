@@ -18,6 +18,9 @@ export default function Login() {
      if (!isAuthorise) {
       localStorage.setItem("AUTH", "false")
      } 
+     else {
+      
+     }
   }, []);
 
 const login = (event) => {
