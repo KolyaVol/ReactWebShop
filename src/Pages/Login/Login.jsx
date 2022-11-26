@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./Login.module.css";
 import MyInput from "../../UI/MyInput/MyInput";
 import MyButton from "../../UI/MyButton/MyButton";
-import { Link } from "react-router-dom";
+import { Form, Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 
 export default function Login() {
@@ -11,6 +11,7 @@ export default function Login() {
   let [name, setName] = useState("");
 
   const dispatch = useDispatch();
+  const navigate = useNavigate()
 
   let isAuthorise = localStorage.getItem('AUTH') 
 
@@ -28,12 +29,13 @@ const login = (event) => {
   localStorage.setItem("AUTH", "true");
   localStorage.setItem("USERNAME", `${name}`);
   dispatch({ type: "USERNAME", payload: `${name}` });
+  navigate('/webshop')
 };
 
   return (
     <div className={styles.Login}>
       {hasAcc ? (
-        <form onSubmit={login} className={styles.Login__form}>
+        <form onSubmit={login} action='/webshop' className={styles.Login__form}>
           <div className={styles.title}>Войти или создать профиль</div>
           <div className={styles.subtitle}>Имя пользователя</div>
           <MyInput
@@ -94,6 +96,7 @@ const login = (event) => {
           </div>
         </form>
       )}
+      
     </div>
   );
 }

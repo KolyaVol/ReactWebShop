@@ -20,133 +20,11 @@
     
 }
 
-.currency {
-    grid-area: curr;
-}
-
-
-.currency:hover .currency__block {display: flex;}
-
-.currency__word {
-    font-size: 1.5rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    cursor: pointer;
-   
-}
-
-.currency__title {
-    color: rgb(85, 84, 84);
-    margin: 0.7rem;
-    font-size: 1rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
-    cursor:default;
-}
-
-.currency__block {
-    position: absolute;
-    display: none;
-    flex-direction: column;
-    text-align: left;
-    background-color: #fff;
-    top: 4rem   ;
-    width: 15rem;
-    height: auto;
-    border-radius: 1rem;
-    z-index: 100;
-    border: black solid 1px;
-}
-
-.currency__item {
-    color: rgb(85, 84, 84);
-    font-size: 1.2rem;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    padding: 0.3rem 1rem;
-    cursor: pointer;
-}
-
-.currency__item:hover {
-    background-color: bisque;
-}
-
-.currency__item:last-child {
-    border-radius: 0 0 1rem 1rem;
-}
-
-.city {
-    display: flex;
-    justify-content: center;
-    grid-area: city;
-    cursor: pointer;
-    
-}
-
-.sell {
-    grid-area: sell;
-    min-width: 10vw;
-   
-}
-
-.burger {
-    grid-area: burger;
-    display: flex;
-    justify-content: center;
-    cursor: pointer;
-}
-
-.logo {
-    align-self: center;
-    grid-area: logo;
-    text-decoration: none;
-    font-size: 2rem;
-    color: #fff;
-    font-family: 'Titan One', cursive;
-}
-
 .input {
     height: 3em;
     grid-area: input;
     width: 90%;
 }
-
-.sign {
-    grid-area: sign;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-.basket {
-    grid-area: basket;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.2rem;
-}
-
-.counter {
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgb(238, 38, 38);
-    border-radius: 50%;
-    color: #fff;
-    top: 4.5rem;
-    right: 15.5rem;
-    height: 1rem;
-    width: 1rem;
-    text-align: center;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    padding: 0 0.2rem 0.2rem;
-    font-size: 1rem;
-}
-
 
 .header__template {
     display: grid;
@@ -156,7 +34,7 @@
     grid-template-columns: 1fr 4fr 4fr 20fr 2fr 3fr 2fr;
     grid-template-rows: 2em 2em;
     grid-template-areas:
-        'curr city sell . . . . '
+        'curr city sell sell . . . '
         'burger logo input input input sign basket';
     align-items: center;
 

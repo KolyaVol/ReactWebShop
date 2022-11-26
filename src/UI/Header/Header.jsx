@@ -1,24 +1,19 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
-import Map from "../Map/Map";
+import React, { useEffect } from "react";
 import MyInput from "../MyInput/MyInput";
-import PopUp from "../PopUp/PopUp";
 import styles from "./Header.module.css";
-import { SlMenu } from "react-icons/sl";
-import { BsCart3, BsFillPersonFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
+import Currency from "./Currency/Currency";
+import CityMap from "./CityMap/CityMap";
+import ToSellers from "./ToSellers/ToSellers";
+import Burger from "./Burger/Burger";
+import Logo from "./Logo/Logo";
+import UserProfile from "./UserProfile/UserProfile";
+import HeaderCart from "./HeaderCart/HeaderCart";
 
 export default function Header() {
-  let [burgerVisible, setBurgerVisible] = useState(false);
-  let [mapVisible, setMapVisible] = useState(false);
-  let [currChoice, setCurrChoice] = useState("BYN");
-  let [counter, setCounter] = useState(0);
-
-  const userName = useSelector((state) => state.userName);
-  const isAuth = useSelector((state) => state.isAuth);
-
-  const dispatch = useDispatch(); 
+  
+  const dispatch = useDispatch();
 
   let isAuthorise = localStorage.getItem("AUTH");
 
@@ -26,10 +21,9 @@ export default function Header() {
     if (!isAuthorise) {
       localStorage.setItem("AUTH", "false");
     } else {
-      dispatch({ type: "USERNAME", payload: localStorage.getItem('USERNAME') });
+      dispatch({ type: "USERNAME", payload: localStorage.getItem("USERNAME") });
     }
   }, []);
-  
 
   const addCssClass = (style1, style2, ...args) => {
     return [style1, style2, args].join(" ");
@@ -41,109 +35,27 @@ export default function Header() {
         <header className={styles.header}>
           <div className={styles.header__container}>
             <div className={styles.header__template}>
-              <div
-                className={addCssClass(styles.currency, styles.header__item)}
-              >
-                <p className={styles.currency__word}>{currChoice}</p>
-                <div className={styles.currency__block}>
-                  <p className={styles.currency__title}>Выберите валюту</p>
-                  <div
-                    onClick={() => setCurrChoice("BYN")}
-                    className={styles.currency__item}
-                  >
-                    BYN Белорусские рубли
-                  </div>
-                  <div
-                    onClick={() => setCurrChoice("RUB")}
-                    className={styles.currency__item}
-                  >
-                    RUB Российские рубли
-                  </div>
-                  <div
-                    onClick={() => setCurrChoice("USD")}
-                    className={styles.currency__item}
-                  >
-                    USD Доллар США
-                  </div>
-                </div>
-              </div>
 
-              <div className={addCssClass(styles.inf2, styles.header__item)}>
-                <PopUp
-                  visible={mapVisible}
-                  setVisible={setMapVisible}
-                  position="centered"
-                >
-                  <Map></Map>
-                </PopUp>
-                <div
-                  onClick={() => setMapVisible(true)}
-                  className={addCssClass(styles.city, styles.header__item)}
-                >
-                  Minsk
-                </div>
-              </div>
+                <Currency/>
 
-              <div
-                onClick={() => setCounter++}
-                className={addCssClass(styles.sell, styles.header__item)}
-              >
-                <Link className={styles.header__item} to={"/addprod"}>
-                  Продавайте у нас
-                </Link>
-              </div>
+                <CityMap/>
 
-              <PopUp
-                visible={burgerVisible}
-                setVisible={setBurgerVisible}
-                position="left"
-              >
-                1231123
-              </PopUp>
-              <div
-                onClick={() => setBurgerVisible(true)}
-                className={addCssClass(styles.burger, styles.header__item)}
-              >
-                <SlMenu />
-              </div>
+                <ToSellers/>
 
-              <Link
-                to={"/webshop"}
-                className={addCssClass(styles.logo, styles.header__item)}
-              >
-                WEBSHOP
-              </Link>
+                <Burger/>
 
-              <MyInput
-                classes={addCssClass(styles.input, styles.header__item)}
-                placeholder="hello"
-              />
-              {!isAuth &&  !userName ? (
-                <Link
-                  to={"/login"}
-                  className={addCssClass(styles.sign, styles.header__item)}
-                >
-                  <BsFillPersonFill />
-                  <span className={styles.sign}>Войти</span>
-                </Link>
-              ) : (
-                <Link
-                  to={"/userPage"}
-                  className={addCssClass(styles.sign, styles.header__item)}
-                >
-                  <BsFillPersonFill />
-                  <span className={styles.sign}>{`${userName}`}</span>
-                </Link>
-              )}
+                <Logo/>
 
-              <Link
-                to={"/cart"}
-                className={addCssClass(styles.basket, styles.header__item)}
-              >
-                {counter ? <div className={styles.counter}>{counter}</div> : ""}
-                <BsCart3 />
-                <span className={styles.basket}>Корзина</span>
-              </Link>
+                <MyInput
+                  classes={addCssClass(styles.input, styles.header__item)}
+                  placeholder="hello"
+                />
+
+                <UserProfile/>
+
+                <HeaderCart/>
+
+              
             </div>
           </div>
         </header>

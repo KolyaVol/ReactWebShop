@@ -1,0 +1,13 @@
+.sell {
+    grid-area: sell;
+    min-width: 20vw;
+    
+}
+
+.header__item {
+    color: #fff;
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

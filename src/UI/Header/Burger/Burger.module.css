@@ -1,0 +1,13 @@
+.burger {
+    grid-area: burger;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.header__item {
+    color: #fff;
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
+    text-decoration: none;
+}

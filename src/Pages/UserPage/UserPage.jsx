@@ -1,5 +1,6 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import MyButton from '../../UI/MyButton/MyButton';
 import styles from "./UserPage.module.css";
 
@@ -15,6 +16,7 @@ export default function UserPage() {
   } 
 
   const dispatch = useDispatch(); 
+  const navigate = useNavigate();
 
   const signOut = (event) => {
   event.preventDefault();
@@ -22,7 +24,7 @@ export default function UserPage() {
   localStorage.clear("USERNAME");
   dispatch({ type: "USERNAME", payload: false });
   dispatch({ type: "NOT_AUTH", payload: false});
-  console.log(userName);
+  navigate('/webshop')
   
 };
 
