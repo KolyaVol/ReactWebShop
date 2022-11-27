@@ -1,8 +1,11 @@
 import React from "react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./ProdList.module.css";
 
 export default function ProdList() {
+  const router = useNavigate()
+
   let [prods, setProds] = useState([
     {
       id: 1,
@@ -137,7 +140,11 @@ export default function ProdList() {
       <p className={styles.prods__title}>Хиты продаж</p>
       <div className={styles.prod__list}>
         {prods.map((prod) => (
-          <div key={prod.id + "prod"} className={styles.prod__item}>
+          <div
+            key={prod.id + "prod"}
+            onClick={() => router(`/prod/${prod.id}`)}
+            className={styles.prod__item}
+          >
             <div className={styles.image}></div>
 
             <div className={styles.price}>{prod.price}</div>

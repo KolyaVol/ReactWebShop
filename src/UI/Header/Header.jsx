@@ -12,7 +12,6 @@ import UserProfile from "./UserProfile/UserProfile";
 import HeaderCart from "./HeaderCart/HeaderCart";
 
 export default function Header() {
-  
   const dispatch = useDispatch();
 
   let isAuthorise = localStorage.getItem("AUTH");
@@ -35,27 +34,24 @@ export default function Header() {
         <header className={styles.header}>
           <div className={styles.header__container}>
             <div className={styles.header__template}>
+              <Currency />
 
-                <Currency/>
+              <CityMap />
 
-                <CityMap/>
+              <ToSellers />
 
-                <ToSellers/>
+              <Burger />
 
-                <Burger/>
+              <Logo />
 
-                <Logo/>
+              <MyInput
+                classes={addCssClass(styles.input, styles.header__item)}
+                placeholder="hello"
+              />
 
-                <MyInput
-                  classes={addCssClass(styles.input, styles.header__item)}
-                  placeholder="hello"
-                />
+              <UserProfile />
 
-                <UserProfile/>
-
-                <HeaderCart/>
-
-              
+              <HeaderCart />
             </div>
           </div>
         </header>

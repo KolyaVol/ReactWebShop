@@ -2,50 +2,45 @@ import React, { useEffect, useState } from "react";
 import styles from "./Login.module.css";
 import MyInput from "../../UI/MyInput/MyInput";
 import MyButton from "../../UI/MyButton/MyButton";
-import { Form, Link, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
 
 export default function Login() {
-
   let [hasAcc, setHasAcc] = useState(true);
   let [name, setName] = useState("");
 
   const dispatch = useDispatch();
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
-  let isAuthorise = localStorage.getItem('AUTH') 
+  let isAuthorise = localStorage.getItem("AUTH");
 
   useEffect(() => {
-     if (!isAuthorise) {
-      localStorage.setItem("AUTH", "false")
-     } 
-     else {
-      
-     }
+    if (!isAuthorise) {
+      localStorage.setItem("AUTH", "false");
+    } else {
+    }
   }, []);
 
-const login = (event) => {
-  event.preventDefault();
-  localStorage.setItem("AUTH", "true");
-  localStorage.setItem("USERNAME", `${name}`);
-  dispatch({ type: "USERNAME", payload: `${name}` });
-  navigate('/webshop')
-};
+  const login = (event) => {
+    event.preventDefault();
+    localStorage.setItem("AUTH", "true");
+    localStorage.setItem("USERNAME", `${name}`);
+    dispatch({ type: "USERNAME", payload: `${name}` });
+    navigate("/webshop");
+  };
 
   return (
     <div className={styles.Login}>
       {hasAcc ? (
-        <form onSubmit={login} action='/webshop' className={styles.Login__form}>
+        <form onSubmit={login} action="/webshop" className={styles.Login__form}>
           <div className={styles.title}>Войти или создать профиль</div>
           <div className={styles.subtitle}>Имя пользователя</div>
           <MyInput
             type="text"
             required
             placeholder="Введите свое имя пользователя"
-            onChange={e => setName(e.target.value)}
-          >
-           
-          </MyInput>
+            onChange={(e) => setName(e.target.value)}
+          ></MyInput>
           <div className={styles.subtitle}>Пароль</div>
           <MyInput
             required
@@ -68,10 +63,8 @@ const login = (event) => {
             type="text"
             required
             placeholder="Введите свое имя пользователя"
-            onChange={e => setName(e.target.value)}
-          >
-           
-          </MyInput>
+            onChange={(e) => setName(e.target.value)}
+          ></MyInput>
           <div className={styles.subtitle}>Пароль</div>
           <MyInput
             type="password"
@@ -96,7 +89,6 @@ const login = (event) => {
           </div>
         </form>
       )}
-      
     </div>
   );
 }

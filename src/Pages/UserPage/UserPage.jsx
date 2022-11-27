@@ -8,6 +8,7 @@ export default function UserPage() {
 
 
   const userName = useSelector((state) => state.userName);
+  console.log(userName);
   let firstLetter = () => {
     if (userName) {
       return userName.split("").slice(0, 1).join();
@@ -32,7 +33,7 @@ export default function UserPage() {
     <div className={styles.UserPage}>
       <div className={styles.UserBox}>
         <div className={styles.UserTitle}>
-          <div className={styles.UserPic}>{firstLetter}</div>
+          <div className={styles.UserPic}>{firstLetter()}</div>
           <div className={styles.UserName}>{userName}</div>
         </div>
         <MyButton onClick={signOut}>Выйти</MyButton>

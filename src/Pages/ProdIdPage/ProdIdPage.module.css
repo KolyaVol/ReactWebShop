@@ -1,0 +1,10 @@
+.prod {
+    margin: 11rem 0 -2rem;
+    position: relative;
+    min-height: 50vh;
+    width: 101.1%;
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    background-color: #fff;
+}
