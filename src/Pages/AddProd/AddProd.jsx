@@ -13,13 +13,14 @@ export default function AddProd() {
     "name",
   ];
   return (
-    <div className={styles.addProd}>
+    <form className={styles.addProd}>
       {charArr.map((char) => (
         <div className={styles.charItem}>
           <span className={styles.charTitle}>{char}</span>
-          <MyInput placeholder={`Введите ${char}`}></MyInput>
+          <MyInput required placeholder={`Введите ${char}`}></MyInput>
         </div>
       ))}
-    </div>
+      <input type='submit'></input>
+    </form>
   );
 }
