@@ -13,8 +13,8 @@ export default function Login() {
   
   const addToCart = () => {
 
-    const prodId = params.id;
-    const addProd = prodList.prods.find((item) => item.id == prodId);
+    const addProd = prodList.prods.find((item) => item.id == params.id);
+
     dispatch({ type: "ADD_PROD", payload: addProd });
     console.log(cartList);
   };
