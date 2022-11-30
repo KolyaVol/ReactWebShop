@@ -12,10 +12,10 @@ export default function Login() {
   const params = useParams();
   
   const addToCart = () => {
-
-    const addProd = prodList.prods.find((item) => item.id == params.id);
-
-    dispatch({ type: "ADD_PROD", payload: addProd });
+    dispatch({
+      type: "ADD_PROD",
+      payload: prodList.prods.find((item) => item.id == params.id),
+    });
     console.log(cartList);
   };
 
