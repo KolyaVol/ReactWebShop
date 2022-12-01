@@ -7,18 +7,23 @@ import { useSelector } from 'react-redux';
 
 export default function HeaderCart() {
 
-    const counter = useSelector((state) => state.counter);
+    const cartProds = useSelector((state) => state.addToCart);
     
     const addCssClass = (style1, style2, ...args) => {
       return [style1, style2, args].join(" ");
     };
+    console.log(cartProds.prods.length);
 
   return (
     <NavLink
       to={"/cart"}
       className={addCssClass(styles.basket, styles.header__item)}
     >
-      {counter.count ? <div className={styles.counter}>{counter.count}</div> : ""}
+      {cartProds.prods[0] ? (
+        <div className={styles.counter}>{+cartProds.prods.length}</div>
+      ) : (
+        ""
+      )}
       <BsCart3 />
       <span className={styles.basket}>Корзина</span>
     </NavLink>

@@ -21,7 +21,7 @@
     grid-template-areas:
         'img img img'
         'pr sl sl'
-        'descr descr descr';
+        'name name name';
     border-radius: 2rem;
     height: 14rem;
     width: 10rem;
@@ -60,7 +60,7 @@
     display: block;
     color: gainsboro;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    grid-area: descr;
+    grid-area: name;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

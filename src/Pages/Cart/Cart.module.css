@@ -47,10 +47,50 @@
     
 }
 
-.prods__title {
+
+.cart__title {
     font-size: 2rem;
     font-family: 'Titan One', cursive;
-    margin-left: 15vw;
+    margin-left: 1rem;
+}
+
+.cart__item {
+    display: flex;
+    border-radius: 2rem;
+    height: 8rem;
+    width: 70vw;
+    font-size: 1.4rem;
+    margin: 1rem;
+}
+
+.cart__image {
+    border-radius: 0.7rem;
+    background-color: cornflowerblue;
+    width: 7rem;
+    height: 7rem;
+    margin-right: 1rem;
+    
+}
+
+.cart__price {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+}
+
+.cart__sale {
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    
+    text-decoration: line-through;
+}
+
+.cart__name {
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .prod__item {
@@ -60,12 +100,14 @@
     grid-template-areas:
         'img img img'
         'pr sl sl'
-        'descr descr descr';
+        'name name name';
     border-radius: 2rem;
     height: 14rem;
     width: 10rem;
     font-size: 1.4rem;
     margin: 1rem;
+    cursor: pointer;
+
 }
 
 .image {
@@ -80,6 +122,7 @@
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
     grid-area: pr;
+
 
 }
 
@@ -96,5 +139,8 @@
     display: block;
     color: gainsboro;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    grid-area: descr;
+    grid-area: name;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
