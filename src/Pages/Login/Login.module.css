@@ -2,11 +2,12 @@
     margin: 12rem 0 -2rem;
     position: relative;
     min-height: 50vh;
-    width: 100%;
+    width: 99.2vw;
     display: flex;
     justify-content: center;
     border-radius: 2rem;
     background-color: #fff;
+    box-sizing: border-box;
 }
 .Login__form {
     display: flex;

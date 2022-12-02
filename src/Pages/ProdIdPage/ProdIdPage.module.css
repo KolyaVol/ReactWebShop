@@ -1,16 +1,18 @@
 .prod {
     margin: 11rem 0 -2rem;
+    padding: 1rem 15vw;
     position: relative;
     min-height: 80vh;
-    width: 101.1%;
+    min-width: 99.2vw;
     border-radius: 2rem;
     background-color: #fff;
+    box-sizing: border-box;
    
 }
 
 .container {
     max-width: 70vw;
-    margin: 2rem 15vw;
+    margin: 2rem 0;
     display: flex;
     justify-content: space-between;
 }
@@ -19,7 +21,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-right: 1rem;
+    
+    
 }
 
 .photo__arr {
@@ -30,31 +33,42 @@
     min-width: 6rem;
     min-height: 60vh;
     background-color:cornflowerblue;
+    margin-right: 0.5rem;
 }
 
 .current__photo {
     background-color: cornflowerblue;
     border-radius: 2rem;
-    min-width: 30rem;
-    max-width: 50rem;
+    min-width: 20rem;
+    max-width: 30rem;
     min-height: 40rem;
     max-height: 80rem;
-    margin: 2rem 0 0rem 2rem;
+    
 }
 
 .description {
     background-color: cornflowerblue;
     border-radius: 2rem;
-    min-width: 25rem;
-    max-width: 50rem;
+    min-width: 15rem;
     min-height: 40rem;
     max-height: 80rem;
-    margin: 2rem 0 0rem 0;
+    margin-left: 1rem;
+    padding: 2rem;
+    box-sizing: border-box;
+
 }
 
 .purchase {
     display:flex;
     flex-direction: column;
+    position: relative;
+    right: 0;
+    margin: 2rem 0rem 2rem 6rem;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+    max-height: 13rem;
+    min-width: 20rem;
+    padding: 1rem;
 }
 
 .prices {
@@ -62,8 +76,27 @@
     justify-content: flex-start;
     align-items: center;
     margin-top: 2rem;
+    margin-right: 15vw;
+    
 }
 
 .price {
-    margin: 0 2rem;
+    margin: 0;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    font-size: 2rem;
 }
+
+.sale {
+    font-size: 1.5rem;
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    text-decoration: line-through;
+}
+
+.btns {
+   
+}
+
