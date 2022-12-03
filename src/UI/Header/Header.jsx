@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import MyInput from "../MyInput/MyInput";
 import styles from "./Header.module.css";
 import { IconContext } from "react-icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import Currency from "./Currency/Currency";
 import CityMap from "./CityMap/CityMap";
 import ToSellers from "./ToSellers/ToSellers";
@@ -12,15 +12,22 @@ import UserProfile from "./UserProfile/UserProfile";
 import HeaderCart from "./HeaderCart/HeaderCart";
 
 export default function Header() {
-  const dispatch = useDispatch();
 
-  let isAuthorise = localStorage.getItem("AUTH");
+  const dispatch = useDispatch();
+  const cartProds = useSelector((state) => state.addToCart);
+
+  const isAuthorise = localStorage.getItem("AUTH");
 
   useEffect(() => {
     if (!isAuthorise) {
       localStorage.setItem("AUTH", "false");
     } else {
       dispatch({ type: "USERNAME", payload: localStorage.getItem("USERNAME") });
+      dispatch({
+        type: "CONCAT_PROD_ARR",
+        payload: JSON.parse(localStorage.getItem("CART")),
+      });
+      console.log(cartProds);
     }
   }, []);
 

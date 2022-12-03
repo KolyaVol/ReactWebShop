@@ -12,7 +12,6 @@ export default function HeaderCart() {
     const addCssClass = (style1, style2, ...args) => {
       return [style1, style2, args].join(" ");
     };
-    console.log(cartProds.prods.length);
 
   return (
     <NavLink

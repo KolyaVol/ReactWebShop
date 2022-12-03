@@ -9,7 +9,7 @@ export default function HomePage() {
     <div className={styles.homePage}>
       <HomeSlider />
 
-      <ProdList></ProdList>
+      <ProdList>Хиты продаж</ProdList>
 
       <RecBox />
 
