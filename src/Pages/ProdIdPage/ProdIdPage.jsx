@@ -7,6 +7,17 @@ import styles from "./ProdIdPage.module.css";
 export default function Login() {
   const dispatch = useDispatch();
   const router = useNavigate();
+  
+  const cartProds = useSelector((state) => state.addToCart);
+  
+  const mySet = new Set(cartProds.prods.map((prod) => (prod.id)));
+
+  let resultOfPain = cartProds.prods.filter((prod) =>
+    !mySet.has(prod.id));
+
+
+    
+    
 
   const prodList = useSelector((state) => state.prodList);
   const params = useParams();
@@ -32,6 +43,7 @@ export default function Login() {
       payload: currentProd,
     });
     addToLs();
+    console.log(resultOfPain);
   };
 
   const addAndGoToCart = () => {

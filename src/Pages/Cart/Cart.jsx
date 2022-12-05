@@ -7,9 +7,23 @@ import ProdList from '../../UI/ProdList/ProdList';
 
 
 export default function Cart() {
-
+  
   const cartProds = useSelector((state) => state.addToCart);
-  console.log(cartProds);
+  function getId(arr,result) {
+    arr.map((item) => (
+      result.push(item.id)
+    ))
+  }
+  const uniqueArr = []
+  getId(cartProds.prods, uniqueArr);
+  const mySet = [...new Set(uniqueArr)];
+
+  let resultOfPain = cartProds.prods.filter((prod) =>
+    mySet.every((item) => item == prod.id)
+  );
+  
+  
+    
   return (
     <div className={styles.Cart}>
       <div className={styles.container}>

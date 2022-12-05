@@ -12,22 +12,23 @@ import UserProfile from "./UserProfile/UserProfile";
 import HeaderCart from "./HeaderCart/HeaderCart";
 
 export default function Header() {
-
   const dispatch = useDispatch();
   const cartProds = useSelector((state) => state.addToCart);
 
   const isAuthorise = localStorage.getItem("AUTH");
 
   useEffect(() => {
-    if (!isAuthorise) {
-      localStorage.setItem("AUTH", "false");
-    } else {
-      dispatch({ type: "USERNAME", payload: localStorage.getItem("USERNAME") });
+    if (!cartProds.prods[0] && localStorage.getItem("CART")) {
       dispatch({
         type: "CONCAT_PROD_ARR",
         payload: JSON.parse(localStorage.getItem("CART")),
       });
-      console.log(cartProds);
+    }
+
+    if (!isAuthorise) {
+      localStorage.setItem("AUTH", "false");
+    } else {
+      dispatch({ type: "USERNAME", payload: localStorage.getItem("USERNAME") });
     }
   }, []);
 
