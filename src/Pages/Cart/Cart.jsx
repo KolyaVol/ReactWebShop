@@ -9,18 +9,27 @@ import ProdList from '../../UI/ProdList/ProdList';
 export default function Cart() {
   
   const cartProds = useSelector((state) => state.addToCart);
-  function getId(arr,result) {
-    arr.map((item) => (
-      result.push(item.id)
-    ))
-  }
-  const uniqueArr = []
-  getId(cartProds.prods, uniqueArr);
-  const mySet = [...new Set(uniqueArr)];
+  
+  let newArr = cartProds.prods.filter(function (prod, index) {
+    let nextIndex = cartProds.prods.findIndex(function (nextProd) {
+      let sameId = nextProd.id === prod.id;
+      return sameId;
+    });
+    return nextIndex === index;
+  });
+  
+  function hui(prod) {
+    return cartProds.prods.filter(function(item){
+     if (item.id === prod.id) {
+      return true
+     } 
+     else {
+      return false
+     }
+  }).length
+  };
+  
 
-  let resultOfPain = cartProds.prods.filter((prod) =>
-    mySet.every((item) => item == prod.id)
-  );
   
   
     
@@ -29,7 +38,7 @@ export default function Cart() {
       <div className={styles.container}>
         <div className={styles.cart__title}> Корзина:</div>
         {cartProds.prods[0] ? (
-          cartProds.prods.map((prod) => (
+          newArr.map((prod) => (
             <div key={prod.id + "prod"} className={styles.cart__item}>
               <div className={styles.cart__image}></div>
               <div className={styles.cart__description}>
@@ -38,6 +47,7 @@ export default function Cart() {
                 <div className={styles.cart__sale}>{prod.sale}</div>
 
                 <div className={styles.cart__name}>{prod.name}</div>
+                <div>{hui(prod)}</div>
               </div>
             </div>
           ))
