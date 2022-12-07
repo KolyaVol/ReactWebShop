@@ -1,0 +1,13 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center ;
+    width: 10vw;
+    height: 5vw;
+}
+
+.container {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    color: cornflowerblue;
+}

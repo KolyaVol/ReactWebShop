@@ -7,23 +7,6 @@ import styles from "./ProdIdPage.module.css";
 export default function Login() {
   const dispatch = useDispatch();
   const router = useNavigate();
-  
-  const cartProds = useSelector((state) => state.addToCart);
-  
-
-  let newArr = cartProds.prods.filter(function(prod, index) {
-    let nextIndex = cartProds.prods.findIndex(function(nextProd) {
-      let sameId = nextProd.id == prod.id;
-      return sameId
-    })
-    return nextIndex === index;
-  })
-
-  let hui = newArr.map((item) => {
-    cartProds.prods.filter((prod) => item.id === prod.id);
-  });
-    
-    
 
   const prodList = useSelector((state) => state.prodList);
   const params = useParams();
@@ -49,7 +32,6 @@ export default function Login() {
       payload: currentProd,
     });
     addToLs();
-    console.log(hui);
   };
 
   const addAndGoToCart = () => {
