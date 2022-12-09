@@ -1,7 +1,7 @@
 import React from 'react'
 import styles from './Cart.module.css'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import ProdList from '../../UI/ProdList/ProdList';
 import CartCounter from '../../UI/CartCounter/CartCounter';
 
@@ -9,7 +9,6 @@ import CartCounter from '../../UI/CartCounter/CartCounter';
 export default function Cart() {
   
   const cartProds = useSelector((state) => state.addToCart);
-  const dispatch = useDispatch();
   
   let uniqueArr = cartProds.prods.filter(function (prod, index) {
     let nextIndex = cartProds.prods.findIndex(function (nextProd) {

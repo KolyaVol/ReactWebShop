@@ -3,13 +3,14 @@ import styles from "./Login.module.css";
 import MyInput from "../../UI/MyInput/MyInput";
 import MyButton from "../../UI/MyButton/MyButton";
 import { Link, useNavigate } from "react-router-dom";
+import userName from "../../store/userNameSlice";
 import { useDispatch } from "react-redux";
 
 export default function Login() {
   let [hasAcc, setHasAcc] = useState(true);
   let [name, setName] = useState("");
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const navigate = useNavigate();
 
   let isAuthorise = localStorage.getItem("AUTH");
@@ -25,7 +26,7 @@ export default function Login() {
     event.preventDefault();
     localStorage.setItem("AUTH", "true");
     localStorage.setItem("USERNAME", `${name}`);
-    dispatch({ type: "USERNAME", payload: `${name}` });
+    dispatch( userName(name));
     navigate("/webshop");
   };
 

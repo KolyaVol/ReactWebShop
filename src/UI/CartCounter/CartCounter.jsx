@@ -1,17 +1,17 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { removeCartProd, removeOneProd } from "../../store/CartSlice";
 import MyButton from "../MyButton/MyButton";
 import styles from "./CartCounter.module.css";
 
 export default function CartCounter({ id, counter }) {
-  const dispatch = useDispatch();
-
+  const dispatch = useDispatch()
   const increment = () => {
-    dispatch({ type: "REMOVE_ONE_PROD", payload: id });
+    dispatch(removeOneProd(id));
   }
 
   const decrement = () => {
-    dispatch({ type: "REMOVE_PROD", payload: id });
+    dispatch(removeCartProd(id));
   };
   return (
     <div className={styles.container}>

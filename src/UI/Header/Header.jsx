@@ -10,6 +10,8 @@ import Burger from "./Burger/Burger";
 import Logo from "./Logo/Logo";
 import UserProfile from "./UserProfile/UserProfile";
 import HeaderCart from "./HeaderCart/HeaderCart";
+import { pasteCartArr } from "../../store/CartSlice";
+import { userStateName } from "../../store/userNameSlice";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -19,16 +21,16 @@ export default function Header() {
 
   useEffect(() => {
     if (!cartProds.prods[0] && localStorage.getItem("CART")) {
-      dispatch({
-        type: "CONCAT_PROD_ARR",
-        payload: JSON.parse(localStorage.getItem("CART")),
-      });
+      dispatch(pasteCartArr(JSON.parse(localStorage.getItem("CART"))));
     }
 
     if (!isAuthorise) {
       localStorage.setItem("AUTH", "false");
     } else {
-      dispatch({ type: "USERNAME", payload: localStorage.getItem("USERNAME") });
+      //
+      //
+      //
+      console.log(1);
     }
   }, []);
 
