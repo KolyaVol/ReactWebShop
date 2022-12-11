@@ -14,7 +14,7 @@ export default function UserProfile() {
   };
   return (
     <IconContext.Provider value={{ size: "1.5rem" }}>
-      {!isAuth && !userName ? (
+      {!isAuth && userName.name ==='empt' ? (
         <NavLink
           to={"/login"}
           className={addCssClass(styles.sign, styles.header__item)}
@@ -28,7 +28,7 @@ export default function UserProfile() {
           className={addCssClass(styles.sign, styles.header__item)}
         >
           <BsFillPersonFill />
-          <span className={styles.sign}>{`${userName}`}</span>
+          <span className={styles.sign}>{`${userName.name}`}</span>
         </NavLink>
       )}
     </IconContext.Provider>

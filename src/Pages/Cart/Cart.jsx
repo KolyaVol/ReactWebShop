@@ -44,9 +44,8 @@ export default function Cart() {
                 <div className={styles.cart__sale}>{prod.sale}</div>
 
                 <div className={styles.cart__name}>{prod.name}</div>
-                <div>{counter(prod)}</div>
-                <CartCounter id = {prod.id} counter = {counter(prod)}/>
               </div>
+              <CartCounter id={prod.id} counter={counter(prod)} />
             </div>
           ))
         ) : (

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import MyInput from "../MyInput/MyInput";
 import styles from "./Header.module.css";
 import { IconContext } from "react-icons";
@@ -14,6 +14,8 @@ import { pasteCartArr } from "../../store/CartSlice";
 import { userStateName } from "../../store/userNameSlice";
 
 export default function Header() {
+  const [filter, setFilter] = useState({ sort: "", query: "" });
+
   const dispatch = useDispatch();
   const cartProds = useSelector((state) => state.addToCart);
 
@@ -27,10 +29,8 @@ export default function Header() {
     if (!isAuthorise) {
       localStorage.setItem("AUTH", "false");
     } else {
-      //
-      //
-      //
-      console.log(1);
+     dispatch(userStateName(localStorage.getItem("USERNAME")))
+    
     }
   }, []);
 
@@ -56,7 +56,12 @@ export default function Header() {
 
               <MyInput
                 classes={addCssClass(styles.input, styles.header__item)}
-                placeholder="hello"
+                value={filter.query}
+                onChange={(e) =>
+                  setFilter({ ...filter, query: e.target.value })
+                }
+                placeholder="Поиск..."
+                
               />
 
               <UserProfile />
