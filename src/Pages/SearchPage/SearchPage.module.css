@@ -1,0 +1,79 @@
+.SearchPage {
+    margin: 12rem 0 -2rem;
+    position: relative;
+    min-height: 100vh;
+    width: 99.2vw;
+    display: flex;
+    justify-content: center;
+    border-radius: 2rem;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+.prod__list {
+    margin: auto;
+    display: flex;
+    width: 70vw;
+    min-height: 50vh;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.prods__title {
+    font-size: 2rem;
+    font-family: 'Titan One', cursive;
+    margin-left: 15vw;
+}
+
+.prod__item {
+    display: grid;
+    grid-template-columns: repeat(3, 1rf);
+    grid-template-rows: 10rem 2rem 2rem;
+    grid-template-areas:
+        'img img img'
+        'pr sl sl'
+        'name name name';
+    border-radius: 2rem;
+    height: 14rem;
+    width: 10rem;
+    font-size: 1.4rem;
+    margin: 1rem;
+    cursor: pointer;
+
+}
+
+.image {
+    border-radius: 0.7rem;
+    background-color: cornflowerblue;
+    width: 100%;
+    grid-area: img;
+}
+
+.price {
+    display: block;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    grid-area: pr;
+
+
+}
+
+.sale {
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-weight: 200;
+    grid-area: sl;
+    text-decoration: line-through;
+}
+
+.name {
+    display: block;
+    color: gainsboro;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    grid-area: name;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

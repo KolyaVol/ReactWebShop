@@ -1,0 +1,16 @@
+.search {
+    grid-area: search;
+    width: 90%;
+}
+
+.input {
+    height: 3em;
+    width: 100%;
+}
+
+.header__item {
+    color: #fff;
+    font-family: 'Titan One', cursive;
+    font-size: 1.4rem;
+    text-decoration: none;
+}

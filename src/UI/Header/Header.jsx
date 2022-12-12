@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import MyInput from "../MyInput/MyInput";
-import styles from "./Header.module.css";
 import { IconContext } from "react-icons";
 import { useDispatch, useSelector } from "react-redux";
 import Currency from "./Currency/Currency";
@@ -10,12 +9,12 @@ import Burger from "./Burger/Burger";
 import Logo from "./Logo/Logo";
 import UserProfile from "./UserProfile/UserProfile";
 import HeaderCart from "./HeaderCart/HeaderCart";
-import { pasteCartArr } from "../../store/CartSlice";
+import { pasteCartArr } from "../../store/cartSlice";
 import { userStateName } from "../../store/userNameSlice";
+import styles from "./Header.module.css";
+import Search from "./Search/Search";
 
 export default function Header() {
-  const [filter, setFilter] = useState({ sort: "", query: "" });
-
   const dispatch = useDispatch();
   const cartProds = useSelector((state) => state.addToCart);
 
@@ -29,8 +28,7 @@ export default function Header() {
     if (!isAuthorise) {
       localStorage.setItem("AUTH", "false");
     } else {
-     dispatch(userStateName(localStorage.getItem("USERNAME")))
-    
+      dispatch(userStateName(localStorage.getItem("USERNAME")));
     }
   }, []);
 
@@ -54,15 +52,7 @@ export default function Header() {
 
               <Logo />
 
-              <MyInput
-                classes={addCssClass(styles.input, styles.header__item)}
-                value={filter.query}
-                onChange={(e) =>
-                  setFilter({ ...filter, query: e.target.value })
-                }
-                placeholder="Поиск..."
-                
-              />
+              <Search />
 
               <UserProfile />
 
