@@ -1,7 +1,7 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const prodFilterSlice = createSlice({
-    name: 'isAuth',
+    name: 'prodFilter',
     initialState: {
         prods: []
     },

@@ -8,11 +8,16 @@ import MyInput from '../../MyInput/MyInput';
 import styles from "./Search.module.css";
 
 export default function Search() {
-    const [filter, setFilter] = useState({ sort: "", query: "" });
+    const [filter, setFilter] = useState({ query: "" });
     const prodList = useSelector(state => state.prodList)
+    const sortType = useSelector(state => state.sortType);
     const dispatch = useDispatch()
 
-    const sortedAndFilteredProds = usePosts(prodList.prods, filter.sort, filter.query)
+    const sortedAndFilteredProds = usePosts(
+      prodList.prods,
+      sortType.sort,
+      filter.query
+    );
 
     const router = useNavigate()
 

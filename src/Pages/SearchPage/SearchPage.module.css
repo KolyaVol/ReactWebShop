@@ -4,14 +4,39 @@
     min-height: 100vh;
     width: 99.2vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     border-radius: 2rem;
     background-color: #fff;
     box-sizing: border-box;
 }
 
+.sort {
+    text-align: left;
+   margin: 1rem 16vw;
+   display: flex;
+    font-size: 1.5rem;  
+}
+
+.sort__title {
+    color: lightblue;
+}
+.sort__type {
+    cursor: pointer;
+    margin-left: 1rem;
+    transition: all 0.2s;
+}
+
+.sort__type:hover {
+    transition: all 0.2s;
+    color: aqua;
+}
+
+.sort__type:active {
+    color: aqua;
+}
 .prod__list {
-    margin: auto;
+    margin: 0 15vw;
     display: flex;
     width: 70vw;
     min-height: 50vh;

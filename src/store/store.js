@@ -4,6 +4,7 @@ import CartSlice from './cartSlice'
 import isAuthSlice from './isAuthSlice'
 import userNameSlice from './userNameSlice'
 import prodFilterSlice from './prodFilterSlice'
+import sortSlice from './sortSlice'
 
 
 
@@ -12,7 +13,8 @@ const reducer = combineReducers({
   addToCart: CartSlice,
   isAuth: isAuthSlice,
   userName: userNameSlice,
-  filteredProdList: prodFilterSlice
+  filteredProdList: prodFilterSlice,
+  sortType: sortSlice
 })
 
 export const store = configureStore({reducer})

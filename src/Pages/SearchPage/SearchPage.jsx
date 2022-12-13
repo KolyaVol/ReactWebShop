@@ -1,15 +1,30 @@
 import React from 'react'
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import { sortKind } from "../../store/sortSlice";
 import styles from "./SearchPage.module.css";
 
 export default function SearchPage() {
+    const dispatch = useDispatch()
     const router = useNavigate()
+    
     const sortedAndFilteredProds = useSelector(
       (state) => state.filteredProdList
     );
+
+    const sortByPrice = () => {
+      dispatch(sortKind('price'));
+    }
   return (
     <div className={styles.SearchPage}>
+      <div className={styles.sort}>
+        <p className={styles.sort__title}>Сортировать по: </p>
+        <p onClick={() => sortByPrice()} className={styles.sort__type}>
+          цене{" "}
+        </p>
+        <p className={styles.sort__type}>названию </p>
+      </div>
+
       <div className={styles.prod__list}>
         {sortedAndFilteredProds.prods.map((prod) => (
           <div
