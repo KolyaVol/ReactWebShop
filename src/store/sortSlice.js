@@ -3,15 +3,19 @@ import { createSlice } from "@reduxjs/toolkit";
 const sortSlice = createSlice({
     name: 'sortSlice',
     initialState: {
-        sort: ''
+        sort: 'name',
+        query: ''
     },
     reducers: 
     {
         sortKind(state, actions) {
             state.sort = actions.payload
+        } ,
+        queryKind(state, actions) {
+            state.query = actions.payload
         } 
     }
 })
 
 export default sortSlice.reducer;
-export const {sortKind} = sortSlice.actions
+export const {sortKind, queryKind} = sortSlice.actions

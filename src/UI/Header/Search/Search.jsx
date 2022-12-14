@@ -1,14 +1,13 @@
 import React from 'react'
-import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { usePosts } from '../../../hooks/usePosts';
 import { filteredProds } from '../../../store/prodFilterSlice';
+import { queryKind } from '../../../store/sortSlice';
 import MyInput from '../../MyInput/MyInput';
 import styles from "./Search.module.css";
 
 export default function Search() {
-    const [filter, setFilter] = useState({ query: "" });
     const prodList = useSelector(state => state.prodList)
     const sortType = useSelector(state => state.sortType);
     const dispatch = useDispatch()
@@ -16,7 +15,7 @@ export default function Search() {
     const sortedAndFilteredProds = usePosts(
       prodList.prods,
       sortType.sort,
-      filter.query
+      sortType.query
     );
 
     const router = useNavigate()
@@ -33,8 +32,8 @@ export default function Search() {
     <form onSubmit={(e) => submitHandler(e)} className={styles.search}>
       <MyInput
         classes={addCssClass(styles.input, styles.header__item)}
-        value={filter.query}
-        onChange={(e) => setFilter({ ...filter, query: e.target.value })}
+        value={sortType.query}
+        onChange={(e) => dispatch(queryKind(e.target.value))}
         placeholder="Поиск..."
       />
     </form>

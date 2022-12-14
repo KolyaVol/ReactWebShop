@@ -1,20 +1,19 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { usePosts } from "../../hooks/usePosts";
+import { filteredProds } from "../../store/prodFilterSlice";
 import { sortKind } from "../../store/sortSlice";
 import styles from "./SearchPage.module.css";
 
 export default function SearchPage() {
-    const dispatch = useDispatch()
-    const router = useNavigate()
-    
-    const sortedAndFilteredProds = useSelector(
-      (state) => state.filteredProdList
-    );
+  const dispatch = useDispatch();
+  const router = useNavigate();
 
-    const sortByPrice = () => {
-      dispatch(sortKind('price'));
-    }
+  const sortedAndFilteredProds = useSelector((state) => state.filteredProdList);
+  const sortByPrice = () => {
+    dispatch(sortKind("price"));
+  };
   return (
     <div className={styles.SearchPage}>
       <div className={styles.sort}>
