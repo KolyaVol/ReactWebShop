@@ -1,9 +1,9 @@
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { usePosts } from "../../hooks/usePosts";
+import { useNameSort } from "../../hooks/useNameSort";
+import { usePriceSort } from "../../hooks/usePriceSort";
 import { filteredProds } from "../../store/prodFilterSlice";
-import { sortKind } from "../../store/sortSlice";
 import styles from "./SearchPage.module.css";
 
 export default function SearchPage() {
@@ -11,8 +11,16 @@ export default function SearchPage() {
   const router = useNavigate();
 
   const sortedAndFilteredProds = useSelector((state) => state.filteredProdList);
+
+  const priceSort = usePriceSort(sortedAndFilteredProds.prods);
+  const nameSort = useNameSort(sortedAndFilteredProds.prods);
+
   const sortByPrice = () => {
-    dispatch(sortKind("price"));
+    dispatch(filteredProds(priceSort));
+  };
+
+  const sortByName = () => {
+    dispatch(filteredProds(nameSort));
   };
   return (
     <div className={styles.SearchPage}>
@@ -21,7 +29,9 @@ export default function SearchPage() {
         <p onClick={() => sortByPrice()} className={styles.sort__type}>
           цене{" "}
         </p>
-        <p className={styles.sort__type}>названию </p>
+        <p onClick={() => sortByName()} className={styles.sort__type}>
+          названию{" "}
+        </p>
       </div>
 
       <div className={styles.prod__list}>
