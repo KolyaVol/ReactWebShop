@@ -3,7 +3,7 @@ import styles from "./Footer.module.css";
 
 export default function Footer() {
   return (
-    <div>
+    <footer>
       <div className={styles.footer__bg}>
         <div className={styles.footer__box}>
           ООО «WEBSHOP», г. Минск, ул.Пушкина 111 Телефон для связи: +375 29 000
@@ -16,6 +16,6 @@ export default function Footer() {
           торговли и услуг Мингорисполкома
         </div>
       </div>
-    </div>
+    </footer>
   );
 }

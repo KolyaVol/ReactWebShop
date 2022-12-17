@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import MyInput from "../MyInput/MyInput";
+import React, { useEffect } from "react";
 import { IconContext } from "react-icons";
 import { useDispatch, useSelector } from "react-redux";
 import Currency from "./Currency/Currency";
@@ -37,9 +36,9 @@ export default function Header() {
   };
 
   return (
-    <div>
+    <header>
       <IconContext.Provider value={{ size: "1.5rem" }}>
-        <header className={styles.header}>
+        <div className={styles.header}>
           <div className={styles.header__container}>
             <div className={styles.header__template}>
               <Currency />
@@ -59,8 +58,8 @@ export default function Header() {
               <HeaderCart />
             </div>
           </div>
-        </header>
+        </div>
       </IconContext.Provider>
-    </div>
+    </header>
   );
 }

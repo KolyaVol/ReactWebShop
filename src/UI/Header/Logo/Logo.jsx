@@ -8,11 +8,11 @@ export default function Logo() {
   };
 
   return (
-      <NavLink
-        to={"/webshop"}
-        className={addCssClass(styles.logo, styles.header__item)}
-      >
-        WEBSHOP
-      </NavLink>
+    <NavLink
+      to={"/webshop"}
+      className={addCssClass(styles.logo, styles.header__item)}
+    >
+      <h1>WEBSHOP</h1>
+    </NavLink>
   );
 }

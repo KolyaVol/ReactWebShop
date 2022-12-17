@@ -5,7 +5,6 @@
     width: 99.2vw;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     border-radius: 2rem;
     background-color: #fff;
     box-sizing: border-box;
@@ -13,17 +12,18 @@
 
 .sort {
     text-align: left;
-   margin: 1rem 16vw;
-   display: flex;
+    margin: 1rem 15vw;
+    display: flex;
     font-size: 1.5rem;  
 }
 
 .sort__title {
+    margin: 0 1vw;
     color: lightblue;
 }
 .sort__type {
     cursor: pointer;
-    margin-left: 1rem;
+    margin: 0 1rem;
     transition: all 0.2s;
 }
 

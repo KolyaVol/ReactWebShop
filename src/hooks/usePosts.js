@@ -1,8 +1,5 @@
 import { useMemo } from "react";
 
-
-
-
 export const usePosts = (prods, sort, query) => {
     
 
