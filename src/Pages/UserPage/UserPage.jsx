@@ -10,8 +10,8 @@ export default function UserPage() {
   const dispatch = useDispatch;
   const userName = useSelector((state) => state.userName);
   let firstLetter = () => {
-    if (userName) {
-      return userName.name.split("").slice(0, 1).join();
+    if (userName.firstName) {
+      return userName.firstName.split("").slice(0, 1).join();
     } else return "";
   };
 
@@ -30,7 +30,7 @@ export default function UserPage() {
       <div className={styles.UserBox}>
         <div className={styles.UserTitle}>
           <div className={styles.UserPic}>{firstLetter()}</div>
-          <div className={styles.UserName}>{userName.name}</div>
+          <div className={styles.UserName}>{userName.firstName}</div>
         </div>
         <MyButton onClick={signOut}>Выйти</MyButton>
       </div>

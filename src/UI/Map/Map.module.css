@@ -1,10 +1,9 @@
-.zero {
+.container {
     position:relative;
     overflow:hidden;
 }
 .first {
-    color:#eee;
-    font-size:12px;
+    font-size: 1.4rem;;
     position:absolute;
     top:0px;
 }

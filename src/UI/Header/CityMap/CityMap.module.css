@@ -3,12 +3,9 @@
     justify-content: center;
     grid-area: city;
     cursor: pointer;
-
-}
-
-.header__item {
     color: #fff;
-    font-family: 'Titan One', cursive;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.4rem;
     text-decoration: none;
+
 }

@@ -3,7 +3,7 @@ import styles from "./Login.module.css";
 import MyInput from "../../UI/MyInput/MyInput";
 import MyButton from "../../UI/MyButton/MyButton";
 import { Link, useNavigate } from "react-router-dom";
-import userName from "../../store/userNameSlice";
+import { userStateName } from "../../store/userNameSlice";
 import { useDispatch } from "react-redux";
 
 export default function Login() {
@@ -26,23 +26,25 @@ export default function Login() {
     event.preventDefault();
     localStorage.setItem("AUTH", "true");
     localStorage.setItem("USERNAME", `${name}`);
-    dispatch( userName(name));
+    dispatch(userStateName(name));
     navigate("/webshop");
   };
 
   return (
     <div className={styles.Login}>
       {hasAcc ? (
-        <form onSubmit={login} action="/webshop" className={styles.Login__form}>
+        <form onSubmit={login} className={styles.Login__form}>
           <div className={styles.title}>Войти или создать профиль</div>
-          <div className={styles.subtitle}>Имя пользователя</div>
+
+          <p className={styles.subtitle}>Имя пользователя</p>
           <MyInput
             type="text"
             required
             placeholder="Введите свое имя пользователя"
             onChange={(e) => setName(e.target.value)}
           ></MyInput>
-          <div className={styles.subtitle}>Пароль</div>
+
+          <p className={styles.subtitle}>Пароль</p>
           <MyInput
             required
             type="password"
@@ -53,7 +55,7 @@ export default function Login() {
               Зарегистрироваться
             </MyButton>
 
-            <MyButton>Войти</MyButton>
+            <MyButton >Войти</MyButton>
           </div>
         </form>
       ) : (
@@ -81,11 +83,7 @@ export default function Login() {
             <MyButton onClick={() => setHasAcc(true)}>Войти</MyButton>
 
             <Link className={styles.link} to={"/webshop"}>
-              <MyButton
-              //onClick={() => dispatch({ type: "AUTH", payload: true })}
-              >
-                Зарегистрироваться
-              </MyButton>
+              <MyButton >Зарегистрироваться</MyButton>
             </Link>
           </div>
         </form>

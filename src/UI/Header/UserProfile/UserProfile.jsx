@@ -6,29 +6,21 @@ import { BsFillPersonFill } from "react-icons/bs";
 import styles from "./UserProfile.module.css";
 
 export default function UserProfile() {
+
   const userName = useSelector((state) => state.userName);
   const isAuth = useSelector((state) => state.isAuth);
-
-  const addCssClass = (style1, style2, ...args) => {
-    return [style1, style2, args].join(" ");
-  };
+  console.log(userName);
   return (
     <IconContext.Provider value={{ size: "1.5rem" }}>
-      {!isAuth && userName.name ==='empt' ? (
-        <NavLink
-          to={"/login"}
-          className={addCssClass(styles.sign, styles.header__item)}
-        >
+      {!isAuth && userName.firstName === "" ? (
+        <NavLink to={"/login"} className={styles.sign}>
           <BsFillPersonFill />
           <span className={styles.sign}>Войти</span>
         </NavLink>
       ) : (
-        <NavLink
-          to={"/userPage"}
-          className={addCssClass(styles.sign, styles.header__item)}
-        >
+        <NavLink to={"/userPage"} className={styles.sign}>
           <BsFillPersonFill />
-          <span className={styles.sign}>{`${userName.name}`}</span>
+          <span className={styles.sign}>{`${userName.firstName}`}</span>
         </NavLink>
       )}
     </IconContext.Provider>

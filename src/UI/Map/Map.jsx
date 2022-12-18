@@ -4,8 +4,8 @@ import styles from "./Map.module.css";
 
 export default function Map() {
   return (
-    <div>
-      <div className={styles.zero}>
+   
+      <div className={styles.container}>
         <Link
           to="https://yandex.by/maps/157/minsk/?utm_medium=mapframe&utm_source=maps"
           className={styles.first}
@@ -24,6 +24,6 @@ export default function Map() {
           className={styles.third}
         ></iframe>
       </div>
-    </div>
+ 
   );
 }

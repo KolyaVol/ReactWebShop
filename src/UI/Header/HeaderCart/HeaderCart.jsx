@@ -9,14 +9,10 @@ export default function HeaderCart() {
 
     const cartProds = useSelector((state) => state.addToCart);
     
-    const addCssClass = (style1, style2, ...args) => {
-      return [style1, style2, args].join(" ");
-    };
-
   return (
     <NavLink
       to={"/cart"}
-      className={addCssClass(styles.basket, styles.header__item)}
+      className={styles.basket}
     >
       {cartProds.prods[0] ? (
         <div className={styles.counter}>{+cartProds.prods.length}</div>

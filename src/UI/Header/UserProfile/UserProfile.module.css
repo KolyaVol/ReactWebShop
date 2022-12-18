@@ -5,12 +5,6 @@
     align-items: center;
     text-decoration: none;
     color: #fff;
-    font-size: 1.2rem;
-}
-
-.header__item {
-    color: #fff;
-    font-family: 'Titan One', cursive;
     font-size: 1.4rem;
-    text-decoration: none;
+    font-family: 'Titan One', cursive;
 }
