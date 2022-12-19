@@ -7,7 +7,7 @@ export default function ToSellers() {
     <div>
       <div className={styles.sell}>
         <NavLink className={styles.sell} to={"/addprod"}>
-          Продавайте у нас
+          <h3>Продавайте у нас</h3>
         </NavLink>
       </div>
     </div>

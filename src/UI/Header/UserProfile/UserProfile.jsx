@@ -9,7 +9,6 @@ export default function UserProfile() {
 
   const userName = useSelector((state) => state.userName);
   const isAuth = useSelector((state) => state.isAuth);
-  console.log(userName);
   return (
     <IconContext.Provider value={{ size: "1.5rem" }}>
       {!isAuth && userName.firstName === "" ? (

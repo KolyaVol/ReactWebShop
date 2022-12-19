@@ -7,12 +7,9 @@ import styles from "./CityMap.module.css";
 export default function CityMap() {
   let [mapVisible, setMapVisible] = useState(false);
 
-  const addCssClass = (style1, style2, ...args) => {
-    return [style1, style2, args].join(" ");
-  };
   return (
     <div>
-      <div className={addCssClass(styles.inf2, styles.header__item)}>
+      <div>
         <PopUp
           visible={mapVisible}
           setVisible={setMapVisible}
@@ -20,12 +17,12 @@ export default function CityMap() {
         >
           <Map></Map>
         </PopUp>
-        <div
+        <h3
           onClick={() => setMapVisible(true)}
-          className={addCssClass(styles.city, styles.header__item)}
+          className={styles.city}
         >
-          Minsk
-        </div>
+          Минск
+        </h3>
       </div>
     </div>
   );

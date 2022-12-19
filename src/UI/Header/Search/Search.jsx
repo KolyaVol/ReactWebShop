@@ -25,13 +25,11 @@ export default function Search() {
         dispatch(filteredProds(sortedAndFilteredProds));
         router('/search')
     }
-    const addCssClass = (style1, style2, ...args) => {
-      return [style1, style2, args].join(" ");
-    };
+    
   return (
     <form onSubmit={(e) => submitHandler(e)} className={styles.search}>
       <MyInput
-        classes={addCssClass(styles.input, styles.header__item)}
+        classes={styles.input}
         value={sortType.query}
         onChange={(e) => dispatch(queryKind(e.target.value))}
         placeholder="Поиск..."

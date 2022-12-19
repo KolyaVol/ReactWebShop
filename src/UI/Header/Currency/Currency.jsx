@@ -5,14 +5,10 @@ import styles from "./Currency.module.css";
 export default function Currency() {
     let [currChoice, setCurrChoice] = useState("BYN");
 
-    const addCssClass = (style1, style2, ...args) => {
-      return [style1, style2, args].join(" ");
-    };
-
   return (
     <div>
-        <div className={addCssClass(styles.currency, styles.header__item)}>
-            <p className={styles.currency__word}>{currChoice}</p>
+        <div className={styles.currency}>
+            <h3 className={styles.currency__word}>{currChoice}</h3>
             <div className={styles.currency__block}>
             <p className={styles.currency__title}>Выберите валюту</p>
             <div
