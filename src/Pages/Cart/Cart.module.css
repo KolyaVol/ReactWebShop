@@ -71,12 +71,13 @@
 
 .cart__item:last-child {
     margin-bottom: 100rem;
-    background-color: red;
 }
 
 .cart__image {
     border-radius: 0.7rem;
-    background-color: cornflowerblue;
+    background: linear-gradient(217deg, rgba(47, 4, 236, 0.8), rgba(255, 0, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
     width: 7rem;
     height: 7rem;
     margin-right: 1rem;
@@ -118,42 +119,6 @@
     font-size: 1.4rem;
     margin: 1rem;
     cursor: pointer;
-
-}
-
-.image {
-    border-radius: 0.7rem;
-    background-color: cornflowerblue;
-    width: 100%;
-    grid-area: img;
-}
-
-.price {
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    grid-area: pr;
-
-
-}
-
-.sale {
-    display: block;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
-    grid-area: sl;
-    text-decoration: line-through;
-}
-
-.name {
-    display: block;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    grid-area: name;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
 }
 
 .space {

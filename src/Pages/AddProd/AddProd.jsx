@@ -17,7 +17,7 @@ export default function AddProd() {
       {charArr.map((char) => (
         <div className={styles.charItem}>
           <span className={styles.charTitle}>{char}</span>
-          <MyInput required placeholder={`Введите ${char}`}></MyInput>
+          <MyInput classes ={styles.input} required placeholder={`Введите ${char}`}></MyInput>
         </div>
       ))}
       <input type='submit'></input>

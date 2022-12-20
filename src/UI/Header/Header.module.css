@@ -6,7 +6,9 @@
     position: absolute;
     left: 0;
     top: 0;
-    background-color: royalblue;
+    background: linear-gradient(217deg, rgba(47, 4, 236, 0.8), rgba(255, 0, 0, 0) 70.71%),
+        linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
+        linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
     width: 100vw;
     min-height: 15rem; 
 }

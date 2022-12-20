@@ -10,6 +10,10 @@
     font-family: 'Titan One', cursive;
     font-size: 1.4rem;
     text-decoration: none;
-    background-color: rgba(68, 70, 209, 0.2);
+    background-color: rgba(68, 70, 209, 0.1);
 }
 
+.input:focus {
+    background-color: #fff;
+    color: black;
+}
