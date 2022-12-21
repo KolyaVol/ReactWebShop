@@ -1,7 +1,7 @@
 .prod__list {
     margin: auto;
     display: flex;
-    width: 70vw;
+    max-width: 70vw;
     min-height: 50vh;
     justify-content: center;
     flex-wrap: wrap;
@@ -16,15 +16,16 @@
 
 .prod__item {
     display: grid;
-    grid-template-columns: repeat(3, 1rf);
-    grid-template-rows: 10rem 2rem 2rem;
+    grid-template-columns: repeat(3, 3vw);
+    grid-template-rows: 16vh 4vh 4vh;
     grid-template-areas:
         'img img img'
         'pr sl sl'
         'name name name';
     border-radius: 2rem;
-    height: 14rem;
-    width: 10rem;
+    height: 24vh;
+    min-width: 8rem;
+    width: 9vw;
     font-size: 1.4rem;
     margin: 1rem;
     cursor: pointer;

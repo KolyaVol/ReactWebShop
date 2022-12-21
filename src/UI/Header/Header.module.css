@@ -11,13 +11,15 @@
         linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
     width: 100vw;
     min-height: 15rem; 
+    margin: auto;
 }
 
 .header__container {
     display: grid;
     justify-content: start;
     margin: 1rem 1rem 6rem 1rem;
-    width: 70vw;
+    min-width: 50vw;
+    max-width: 70vw;
 }
 
 
@@ -27,11 +29,11 @@
     font-size: 1.4rem;
     grid-gap: 1em;
     justify-content: start;
-    grid-template-columns: 1fr 4fr 4fr 20fr 2fr 3fr 2fr;
+    grid-template-columns: 4vw 16vw 30vw 7vw 7vw;
     grid-template-rows: 2em 2em;
     grid-template-areas:
-        'curr city sell sell sell . . '
-        'burger logo search search search sign basket';
+        'curr city sell  . . '
+        'burger logo search  sign basket';
     align-items: center;
 
 }

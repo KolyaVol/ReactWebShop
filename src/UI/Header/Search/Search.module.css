@@ -1,11 +1,11 @@
 .search {
     grid-area: search;
-    width: 90%;
+    width: 20vw;
 }
 
 .input {
     height: 3em;
-    width: 100%;
+    min-width: 5vw;
     color: #fff;
     font-family: 'Titan One', cursive;
     font-size: 1.4rem;

@@ -6,11 +6,9 @@
     margin: 12rem 0 -2rem;
     padding: 0 30vw;
     position: relative;
-    min-height: 100vh;
     justify-content: center;
     border-radius: 2rem;
     background-color: #fff;
-    width: 99.2vw;
     box-sizing: border-box;
 }
 
