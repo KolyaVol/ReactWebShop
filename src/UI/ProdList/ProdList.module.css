@@ -16,7 +16,7 @@
 
 .prod__item {
     display: grid;
-    grid-template-columns: repeat(3, 3vw);
+    grid-template-columns: repeat(5vw, 2vw, 3vw);
     grid-template-rows: 16vh 4vh 4vh;
     grid-template-areas:
         'img img img'

@@ -11,7 +11,8 @@
         linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
     width: 100vw;
     min-height: 15rem; 
-    margin: auto;
+    font-size: 1.6rem;
+    
 }
 
 .header__container {
@@ -26,8 +27,8 @@
 
 .header__template {
     display: grid;
-    font-size: 1.4rem;
-    grid-gap: 1em;
+    
+    grid-gap: 1rem;
     justify-content: start;
     grid-template-columns: 4vw 16vw 30vw 7vw 7vw;
     grid-template-rows: 2em 2em;

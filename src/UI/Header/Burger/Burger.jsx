@@ -15,10 +15,6 @@ export default function Burger() {
   const dispatch = useDispatch();
   const router = useNavigate();
 
-  const addCssClass = (style1, style2, ...args) => {
-    return [style1, style2, args].join(" ");
-  };
-
   const refrig = usePosts(prodList.prods, "", "холодильник");
   const tv = usePosts(prodList.prods, "", "телевизор");
   const fan = usePosts(prodList.prods, "", "вентилятор");
@@ -46,7 +42,7 @@ export default function Burger() {
       </PopUp>
       <div
         onClick={() => setBurgerVisible(true)}
-        className={addCssClass(styles.burger, styles.header__item)}
+        className={styles.burger}
       >
         <SlMenu />
       </div>

@@ -4,13 +4,19 @@
 }
 
 .input {
-    height: 3em;
+    height: 3rem;
     min-width: 5vw;
+    max-width: 10vw;
     color: #fff;
     font-family: 'Titan One', cursive;
-    font-size: 1.4rem;
     text-decoration: none;
     background-color: rgba(68, 70, 209, 0.1);
+}
+
+@media (min-width: 900px ) {
+    .input {
+        min-width: 25vw;
+    }
 }
 
 .input:focus {

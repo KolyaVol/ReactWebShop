@@ -8,7 +8,6 @@
 
 .currency__word {
     color: #fff;
-    font-size: 1.5rem;
     font-family: 'Titan One', cursive;
     cursor: pointer;
 
@@ -51,11 +50,4 @@
 
 .currency__item:last-child {
     border-radius: 0 0 1rem 1rem;
-}
-
-.header__item {
-    color: #fff;
-    font-family: 'Titan One', cursive;
-    font-size: 1.4rem;
-    text-decoration: none;
 }
