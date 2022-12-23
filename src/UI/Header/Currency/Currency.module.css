@@ -51,3 +51,9 @@
 .currency__item:last-child {
     border-radius: 0 0 1rem 1rem;
 }
+
+@media (max-width: 901px) {
+    .currency__word {
+        display: none;
+    }
+}

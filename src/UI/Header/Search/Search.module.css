@@ -5,7 +5,7 @@
 
 .input {
     height: 3rem;
-    min-width: 5vw;
+    min-width: 20vw;
     max-width: 10vw;
     color: #fff;
     font-family: 'Titan One', cursive;
@@ -13,9 +13,9 @@
     background-color: rgba(68, 70, 209, 0.1);
 }
 
-@media (min-width: 900px ) {
+@media (max-width: 901px ) {
     .input {
-        min-width: 25vw;
+        min-width: 50vw;
     }
 }
 

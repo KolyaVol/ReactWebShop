@@ -13,3 +13,9 @@ p {
 p:hover {
     background-color: gray;
 }
+
+@media (max-width: 901px) {
+    .burger {
+        display: none;
+    }
+}

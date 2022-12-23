@@ -8,4 +8,8 @@
     font-family: 'Titan One', cursive;
 }
 
-
+@media (max-width: 901px) {
+    .sign {
+        display: none;
+    }
+}

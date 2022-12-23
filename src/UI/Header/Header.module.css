@@ -27,18 +27,25 @@
 
 .header__template {
     display: grid;
-    
     grid-gap: 1rem;
-    justify-content: start;
+    justify-content: center;
+    align-items: center;
     grid-template-columns: 4vw 16vw 30vw 7vw 7vw;
     grid-template-rows: 2em 2em;
     grid-template-areas:
         'curr city sell  . . '
         'burger logo search  sign basket';
-    align-items: center;
-
 }
 
-
+@media (max-width: 901px) {
+    .header__template {
+        justify-items: center;
+        align-items: center;
+        grid-template-areas:
+            'logo logo logo logo logo '
+            'search search .  . mobileBurger';
+            
+        }
+}
 
 

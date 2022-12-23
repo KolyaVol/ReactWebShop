@@ -4,4 +4,11 @@
     color: #fff;
     font-family: 'Titan One', cursive;
     text-decoration: none;
+    display: block;
+}
+
+@media (max-width: 901px) {
+    .sell {
+        display: none;
+    }
 }

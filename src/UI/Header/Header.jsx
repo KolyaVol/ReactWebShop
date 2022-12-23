@@ -12,6 +12,7 @@ import { pasteCartArr } from "../../store/cartSlice";
 import { userStateName } from "../../store/userNameSlice";
 import styles from "./Header.module.css";
 import Search from "./Search/Search";
+import MobileBurger from "./MobileBurger/MobileBurger";
 
 export default function Header() {
   const dispatch = useDispatch();
@@ -56,6 +57,8 @@ export default function Header() {
               <UserProfile />
 
               <HeaderCart />
+
+              <MobileBurger/>
             </div>
           </div>
         </div>
