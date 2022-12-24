@@ -7,8 +7,8 @@ export default function ProdList({...props}) {
   const router = useNavigate()
   const prodList = useSelector((state) => state.prodList);
   return (
-    <div className={styles.container}>
-      <p className={styles.prods__title}>{props.children}</p>
+    <div>
+      <h3 className={styles.prods__title}>{props.children}</h3>
       <div className={styles.prod__list}>
         {prodList.prods.map((prod) => (
           <div

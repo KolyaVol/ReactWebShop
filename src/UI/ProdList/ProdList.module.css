@@ -11,7 +11,8 @@
 .prods__title {
     font-size: 2rem;
     font-family: 'Titan One', cursive;
-    margin-left: 15vw;
+    margin-left: 5vw;
+    cursor: default;
 }
 
 .prod__item {

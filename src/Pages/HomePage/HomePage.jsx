@@ -7,13 +7,15 @@ import styles from "./HomePage.module.css";
 export default function HomePage() {
   return (
     <div className={styles.homePage}>
-      <HomeSlider />
+      <div className={styles.container}>
+        <HomeSlider />
 
-      <ProdList>Хиты продаж</ProdList>
+        <ProdList>Хиты продаж</ProdList>
 
-      <RecBox />
+        <RecBox />
 
-      <ProdList></ProdList>
+        <ProdList></ProdList>
+      </div>
     </div>
   );
 }

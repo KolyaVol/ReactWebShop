@@ -10,7 +10,6 @@ export default function HomeSlider() {
   ]);
   let [item, setItem] = useState(1);
   return (
-    <div>
       <div className={styles.slider__box}>
         <div className={styles.slider}>
           {sliderItems.map((i) => (
@@ -41,6 +40,5 @@ export default function HomeSlider() {
           ))}
         </div>
       </div>
-    </div>
   );
 }

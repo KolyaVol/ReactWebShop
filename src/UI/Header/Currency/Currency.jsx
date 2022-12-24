@@ -6,10 +6,11 @@ export default function Currency() {
     let [currChoice, setCurrChoice] = useState("BYN");
 
   return (
-    <div>
-        <div className={styles.currency}>
-            <h3 className={styles.currency__word}>{currChoice}</h3>
-            <div className={styles.currency__block}>
+    
+    <div className={styles.currency}>
+        <h3 className={styles.currency__word}>{currChoice}</h3>
+        
+        <div className={styles.currency__block}>
             <p className={styles.currency__title}>Выберите валюту</p>
             <div
                 onClick={() => setCurrChoice("BYN")}
@@ -30,7 +31,7 @@ export default function Currency() {
                 USD Доллар США
             </div>
         </div>
-      </div>
     </div>
+    
   );
 }

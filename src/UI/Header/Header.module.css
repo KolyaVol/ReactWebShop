@@ -12,7 +12,6 @@
     width: 100vw;
     min-height: 15rem; 
     font-size: 1.6rem;
-    
 }
 
 .header__container {
@@ -23,15 +22,13 @@
     max-width: 70vw;
 }
 
-
-
 .header__template {
     display: grid;
     grid-gap: 1rem;
     justify-content: center;
     align-items: center;
     grid-template-columns: 4vw 16vw 30vw 7vw 7vw;
-    grid-template-rows: 2em 2em;
+    grid-template-rows: 3rem 3rem;
     grid-template-areas:
         'curr city sell  . . '
         'burger logo search  sign basket';

@@ -7,15 +7,13 @@
     border-radius: 2em;
     height: 40vh;
     width: 100vw;
-    margin:  4rem 0 2rem;
     z-index: 1;
 }
 
 .slider {
     position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    right: 15vw;
+    
     width: 70vw;
     height: 45vh;
     border-radius: 3rem;
@@ -44,11 +42,14 @@
 }
 
 .dots {
+    position: relative;
+    right: 15vw;
     display: grid;
     justify-content: center;
     grid-template-columns: 1rem 1rem;
     grid-gap: .7rem;
     margin-top: 1rem;
+    cursor: pointer;
 }
 
 .dot {

@@ -8,22 +8,18 @@ export default function CityMap() {
   let [mapVisible, setMapVisible] = useState(false);
 
   return (
-    <div>
       <div>
         <PopUp
+          classes={styles.PopUpContentCent}
           visible={mapVisible}
           setVisible={setMapVisible}
           position="centered"
         >
           <Map></Map>
         </PopUp>
-        <h3
-          onClick={() => setMapVisible(true)}
-          className={styles.city}
-        >
+        <h3 onClick={() => setMapVisible(true)} className={styles.city}>
           Минск
         </h3>
       </div>
-    </div>
   );
 }

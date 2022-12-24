@@ -61,7 +61,7 @@ export default function Cart() {
           </div>
         )}
         <div className={styles.space} />
-        <ProdList />
+        <ProdList>Возможно, вам понравится</ProdList>
       </div>
     </div>
   );

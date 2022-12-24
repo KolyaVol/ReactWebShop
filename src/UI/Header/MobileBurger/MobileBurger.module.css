@@ -6,19 +6,115 @@
     color: #fff;
     width: 3rem;
     height: 3rem;
-    
     margin-bottom: 3vh;
 }
 
+.PopUpContent {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    min-width: 50vw;
+    min-height: 100vh;
+    color: black;
+    font-weight: 700;
+    background-color: #fff;
+    border-bottom-right-radius: 2rem;
+    border-top-right-radius: 2rem;
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-family: 'Titan One', cursive;
+
+}
+
+.nav__item {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+    font-family: 'Titan One', cursive;
+}
+
+.counter {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: rgb(238, 38, 38);
+    border-radius: 50%;
+    color: #fff;
+    top: -0.3vw;
+    right: 2.7rem;
+    height: 1rem;
+    width: 1rem;
+    text-align: center;
+    font-family: 'Titan One', cursive;
+    padding: 0.1rem;
+    font-size: 1rem;
+}
 
 
+.currency:hover .currency__block {
+    display: flex;
+}
 
+.currency__word {
+    color: black;
+    font-family: 'Titan One', cursive;
+    cursor: pointer;
+
+}
+
+.currency__title {
+    color: rgb(85, 84, 84);
+    margin: 0.7rem;
+    font-size: 1rem;
+    font-family: 'Titan One', cursive;
+    font-weight: 200;
+    cursor: default;
+}
+
+.currency__block {
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    text-align: left;
+    background-color: #fff;
+    top: 20rem;
+    left: 25rem;
+    width: 15rem;
+    height: auto;
+    border-radius: 1rem;
+    z-index: 100;
+    border: black solid 1px;
+}
+
+.currency__item {
+    color: rgb(85, 84, 84);
+    font-size: 1.2rem;
+    font-family: 'Titan One', cursive;
+    padding: 0.3rem 1rem;
+    cursor: pointer;
+}
+
+.currency__item:hover {
+    background-color: rgba(62, 62, 212, 0.3);
+}
+
+.currency__item:last-child {
+    border-radius: 0 0 1rem 1rem;
+}
 
 @media (max-width: 901px) {
     .mobile__burger {
         display: block;
         margin-top: 3.2rem;
     }
+
     .mobile__burger span {
         height: 4px;
         background-color: #fff;

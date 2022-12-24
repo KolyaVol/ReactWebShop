@@ -1,7 +1,16 @@
 .logo {
+    position: relative;
+    height: 0;
     align-self: center;
     grid-area: logo;
     text-decoration: none;
     color: #fff;
     font-family: 'Titan One', cursive;
 }
+
+h1 {
+    position: relative;
+        top: -4.2rem;
+        height: 2px;
+}
+

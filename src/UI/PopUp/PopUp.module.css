@@ -7,8 +7,6 @@
     height: 100vh;
     display: none;
     z-index: 100;
-    
-   
 }
 
 .PopUp.active {
@@ -17,31 +15,8 @@
     justify-content: flex-start;
 }
 
-.PopUpContent {
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-    min-width: 15vw;
-    min-height: 100vh;
-    background-color: #fff;
-    border-bottom-right-radius: 2rem;
-    border-top-right-radius: 2rem;
-    padding: 1.5rem;
-    font-size: 1.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
-}
-
-.PopUpContentCent {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-width: 33vw;
-    min-height: 33vh;
-    background-color: #fff;
-    border-radius: 2rem;
-    font-size: 1.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+body .lock {
+    overflow: hidden;
 }
 
 .centered {

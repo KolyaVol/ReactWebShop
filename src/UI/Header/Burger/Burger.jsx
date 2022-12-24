@@ -10,7 +10,7 @@ import { filteredProds } from "../../../store/prodFilterSlice";
 import { usePosts } from "../../../hooks/usePosts";
 
 export default function Burger() {
-  let [burgerVisible, setBurgerVisible] = useState(false);
+  const [burgerVisible, setBurgerVisible] = useState(false);
   const prodList = useSelector((state) => state.prodList);
   const dispatch = useDispatch();
   const router = useNavigate();
@@ -29,21 +29,19 @@ export default function Burger() {
   return (
     <IconContext.Provider value={{ size: "1.5rem" }}>
       <PopUp
+        classes={styles.PopUpContent}
         visible={burgerVisible}
         setVisible={setBurgerVisible}
         position="left"
       >
         <nav>
-          <p onClick={() => clickHandler(refrig)}>Холодильник</p>
-          <p onClick={() => clickHandler(tv)}>Телевизор</p>
-          <p onClick={() => clickHandler(fan)}>Вентилятор</p>
-          <p onClick={() => clickHandler(monitor)}>Монитор</p>
+          <p onClick={() => clickHandler(refrig)}>Холодильники</p>
+          <p onClick={() => clickHandler(tv)}>Телевизоры</p>
+          <p onClick={() => clickHandler(fan)}>Вентиляторы</p>
+          <p onClick={() => clickHandler(monitor)}>Мониторы</p>
         </nav>
       </PopUp>
-      <div
-        onClick={() => setBurgerVisible(true)}
-        className={styles.burger}
-      >
+      <div onClick={() => setBurgerVisible(true)} className={styles.burger}>
         <SlMenu />
       </div>
     </IconContext.Provider>
