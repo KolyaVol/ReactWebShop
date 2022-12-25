@@ -15,7 +15,7 @@ export default function AddProd() {
   return (
     <form className={styles.addProd}>
       {charArr.map((char) => (
-        <div className={styles.charItem}>
+        <div key={char} className={styles.charItem}>
           <span className={styles.charTitle}>{char}</span>
           <MyInput classes ={styles.input} required placeholder={`Введите ${char}`}></MyInput>
         </div>

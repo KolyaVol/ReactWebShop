@@ -42,10 +42,17 @@ export default function Login() {
     <div className={styles.prod}>
       <div className={styles.container}>
         <div className={styles.photo__box}>
-          <div className={styles.photo__arr}></div>
+          <div className={styles.photo__arr}>
+            <div className={styles.photo__arr__item}></div>
+            <div className={styles.photo__arr__item}></div>
+            <div className={styles.photo__arr__item}></div>
+            <div className={styles.photo__arr__item}></div>
+            <div className={styles.photo__arr__item}></div>
+          </div>
+
           <div className={styles.current__photo}></div>
         </div>
-        <div className={styles.description}>{currentProd.name}</div>
+        <h2 className={styles.description}>{currentProd.name}</h2>
         <div className={styles.purchase}>
           <div className={styles.prices}>
             <div className={styles.price}>{currentProd.price}</div>

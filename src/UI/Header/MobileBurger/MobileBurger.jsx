@@ -30,6 +30,18 @@ export default function MobileBurger() {
     router("/search");
     setBurgerVisible(false);
   };
+
+  const routClickHandler = (rout) => {
+    router(`${rout}`);
+    setBurgerVisible(false);
+  };
+
+  const currencyClickHandler = (currency) => {
+    setCurrChoice(`${currency}`);
+    setBurgerVisible(false);
+  };
+
+
   return (
     <div className={styles.mobile__burger}>
       <PopUp
@@ -40,32 +52,44 @@ export default function MobileBurger() {
       >
         <nav>
           <h3>
-            <NavLink to={"/cart"} className={styles.nav__item}>
+            <div
+              onClick={() => routClickHandler("/cart")}
+              className={styles.nav__item}
+            >
               {cartProds.prods[0] ? (
                 <div className={styles.counter}>{+cartProds.prods.length}</div>
               ) : (
                 ""
               )}
               Корзина
-            </NavLink>
+            </div>
           </h3>
 
           <h3>
             {!isAuth && userName.firstName === "" ? (
-              <NavLink to={"/login"} className={styles.nav__item}>
+              <div
+                onClick={() => routClickHandler("/login")}
+                className={styles.nav__item}
+              >
                 Войти
-              </NavLink>
+              </div>
             ) : (
-              <NavLink to={"/userPage"} className={styles.nav__item}>
+              <div
+                onClick={() => routClickHandler("/userPage")}
+                className={styles.nav__item}
+              >
                 {`${userName.firstName}`}
-              </NavLink>
+              </div>
             )}
           </h3>
 
           <h3>
-            <NavLink className={styles.nav__item} to={"/addprod"}>
+            <div
+              onClick={() => routClickHandler("/addprod")}
+              className={styles.nav__item}
+            >
               Продавайте у нас!
-            </NavLink>
+            </div>
           </h3>
 
           <PopUp
@@ -82,23 +106,22 @@ export default function MobileBurger() {
 
           <div className={styles.currency}>
             <h3 className={styles.currency__word}>{currChoice}</h3>
-
             <div className={styles.currency__block}>
               <p className={styles.currency__title}>Выберите валюту</p>
               <div
-                onClick={() => setCurrChoice("BYN")}
+                onClick={() => currencyClickHandler("BYN")}
                 className={styles.currency__item}
               >
                 BYN Белорусские рубли
               </div>
               <div
-                onClick={() => setCurrChoice("RUB")}
+                onClick={() => currencyClickHandler("RUB")}
                 className={styles.currency__item}
               >
                 RUB Российские рубли
               </div>
               <div
-                onClick={() => setCurrChoice("USD")}
+                onClick={() => currencyClickHandler("USD")}
                 className={styles.currency__item}
               >
                 USD Доллар США

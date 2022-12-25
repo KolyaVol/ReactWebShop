@@ -16,7 +16,7 @@
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3) ;
     border-radius: 1rem;
     min-width: 10rem;
-    max-height: 10rem;
+    max-height: 12rem;
 
 }
 
@@ -27,11 +27,13 @@
 }
 
 .UserPic {
-    margin: 1rem;
+    margin: 1rem 1rem 0;
     width: 5rem;
     height: 5rem;
     border-radius: 50%;
-    background-color: cornflowerblue;
+    background: linear-gradient(217deg, rgba(47, 4, 236, 0.8), rgba(255, 0, 0, 0) 70.71%),
+            linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
+            linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
     color: #fff;
     display: flex;
     justify-content: center;
@@ -41,32 +43,8 @@
 }
 
 .UserName {
-    margin: 1rem;
+    margin: 1rem 1rem;
     font-size: 1.5rem;
 }
 
-.Login__form {
-    display: flex;
-    flex-direction: column;
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-    border-radius: 2rem;
-}
 
-.title {
-    margin: 2rem 1rem;
-    font-size: 1.6rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: bold;
-}
-
-.subtitle {
-    margin: 0 1rem;
-    font-size: 1.4rem;
-    color: rgba(0, 0, 0, 0.3);
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.buttons {
-    display: flex;
-    justify-content: space-evenly;
-}

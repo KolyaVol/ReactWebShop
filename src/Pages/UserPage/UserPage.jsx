@@ -30,7 +30,7 @@ export default function UserPage() {
       <div className={styles.UserBox}>
         <div className={styles.UserTitle}>
           <div className={styles.UserPic}>{firstLetter()}</div>
-          <div className={styles.UserName}>{userName.firstName}</div>
+          <h3 className={styles.UserName}>{userName.firstName}</h3>
         </div>
         <MyButton onClick={signOut}>Выйти</MyButton>
       </div>
