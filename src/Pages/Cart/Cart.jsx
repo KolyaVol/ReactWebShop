@@ -1,6 +1,6 @@
 import React from 'react'
 import styles from './Cart.module.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useSelector } from 'react-redux'
 import ProdList from '../../UI/ProdList/ProdList';
 import CartCounter from '../../UI/CartCounter/CartCounter';
@@ -9,6 +9,7 @@ import CartCounter from '../../UI/CartCounter/CartCounter';
 export default function Cart() {
   
   const cartProds = useSelector((state) => state.addToCart);
+  const router = useNavigate()
   
   let uniqueArr = cartProds.prods.filter(function (prod, index) {
     let nextIndex = cartProds.prods.findIndex(function (nextProd) {
@@ -36,7 +37,11 @@ export default function Cart() {
         <div className={styles.cart__title}> Корзина:</div>
         {cartProds.prods[0] ? (
           uniqueArr.map((prod) => (
-            <div key={prod.id + "prod"} className={styles.cart__item}>
+            <div
+              key={prod.id + "prod"}
+              onClick={() => router(`/prod/${prod.id}`)}
+              className={styles.cart__item}
+            >
               <div className={styles.cart__image}></div>
               <div className={styles.cart__description}>
                 <div className={styles.cart__price}>{prod.price}</div>
