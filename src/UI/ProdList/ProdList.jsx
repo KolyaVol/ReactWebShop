@@ -7,25 +7,25 @@ export default function ProdList({...props}) {
   const router = useNavigate()
   const prodList = useSelector((state) => state.prodList);
   return (
-    <div>
+    <section>
       <h3 className={styles.prods__title}>{props.children}</h3>
-      <div className={styles.prod__list}>
+      <ul className={styles.prod__list}>
         {prodList.prods.map((prod) => (
-          <div
+          <li
             key={prod.id + "prod"}
             onClick={() => router(`/prod/${prod.id}`)}
             className={styles.prod__item}
           >
             <div className={styles.image}></div>
 
-            <div className={styles.price}>{prod.price}</div>
+            <span className={styles.price}>{prod.price}</span>
 
-            <div className={styles.sale}>{prod.sale}</div>
+            <span className={styles.sale}>{prod.sale}</span>
 
-            <div className={styles.name}>{prod.name}</div>
-          </div>
+            <span className={styles.name}>{prod.name}</span>
+          </li>
         ))}
-      </div>
-    </div>
+      </ul>
+    </section>
   );
 }

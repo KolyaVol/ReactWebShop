@@ -15,54 +15,48 @@ import Search from "./Search/Search";
 import MobileBurger from "./MobileBurger/MobileBurger";
 
 export default function Header() {
-  const dispatch = useDispatch();
-  const cartProds = useSelector((state) => state.addToCart);
+	const dispatch = useDispatch();
+	const cartProds = useSelector((state) => state.addToCart);
 
-  const isAuthorise = localStorage.getItem("AUTH");
+	const isAuthorise = localStorage.getItem("AUTH");
 
-  useEffect(() => {
-    if (!cartProds.prods[0] && localStorage.getItem("CART")) {
-      dispatch(pasteCartArr(JSON.parse(localStorage.getItem("CART"))));
-    }
+	useEffect(() => {
+		if (!cartProds.prods[0] && localStorage.getItem("CART")) {
+			dispatch(pasteCartArr(JSON.parse(localStorage.getItem("CART"))));
+		}
 
-    if (!isAuthorise) {
-      localStorage.setItem("AUTH", "false");
-    } else {
-      dispatch(userStateName(localStorage.getItem("USERNAME")));
-    }
-  }, []);
+		if (!isAuthorise) {
+			localStorage.setItem("AUTH", "false");
+		} else {
+			dispatch(userStateName(localStorage.getItem("USERNAME")));
+		}
+	}, []);
 
-  const addCssClass = (style1, style2, ...args) => {
-    return [style1, style2, args].join(" ");
-  };
+	const addCssClass = (style1, style2, ...args) => {
+		return [style1, style2, args].join(" ");
+	};
 
-  return (
-    <header>
-      <IconContext.Provider value={{ size: "1.5rem" }}>
-        <div className={styles.header}>
-          <div className={styles.header__container}>
-            <div className={styles.header__template}>
-              <Currency />
+	return (
+		<header className={styles.header}>
+			<IconContext.Provider value={{ size: "1.5rem" }}>
+				<Currency />
 
-              <CityMap />
+				<CityMap />
 
-              <ToSellers />
+				<ToSellers />
 
-              <Burger />
+				<Burger />
 
-              <Logo />
+				<Logo />
 
-              <Search />
+				<Search />
 
-              <UserProfile />
+				<UserProfile />
 
-              <HeaderCart />
+				<HeaderCart />
 
-              <MobileBurger/>
-            </div>
-          </div>
-        </div>
-      </IconContext.Provider>
-    </header>
-  );
+				<MobileBurger />
+			</IconContext.Provider>
+		</header>
+	);
 }

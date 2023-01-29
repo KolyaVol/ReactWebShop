@@ -1,5 +1,6 @@
 .reccomend__box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
     margin: 2rem auto 2rem auto;
@@ -32,6 +33,11 @@
     border: solid 3rem;
 }
 
+.recommend:hover .content {
+    scale: 1.05;
+    transition: all 1s ease-in-out;
+}
+
 .shadow {
     position: absolute;
     left: 0;
@@ -43,12 +49,20 @@
     transition: all 1s ease-in-out;
 }
 
-.recommend:hover .content {
-    scale: 1.05;
-    transition: all 1s ease-in-out;
-}
-
 .recommend:hover .shadow {
     opacity: 0.3;
     transition: all 1s ease-in-out;
+}
+
+@media (max-width: 800px) {
+    .reccomend__box {
+        flex-direction: column;
+        height: max-content;
+    }
+
+    .recommend {
+        margin-top: 2rem;
+        width: 100%;
+    }
+
 }

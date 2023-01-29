@@ -1,25 +1,32 @@
 .search {
     grid-area: search;
     width: 20vw;
+    margin-top: 1rem;
 }
 
 .input {
     height: 3rem;
-    min-width: 20vw;
-    max-width: 10vw;
+    width: 100%;
     color: #fff;
     font-family: 'Titan One', cursive;
     text-decoration: none;
     background-color: rgba(68, 70, 209, 0.1);
 }
 
-@media (max-width: 901px ) {
+.input:focus {
+    background-color: #fff;
+    color: black;
+}
+
+@media (max-width: 1200px ) {
+    .input {
+        min-width: 25vw;
+    }
+}
+
+@media (max-width: 900px ) {
     .input {
         min-width: 50vw;
     }
 }
 
-.input:focus {
-    background-color: #fff;
-    color: black;
-}

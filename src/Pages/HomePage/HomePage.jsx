@@ -5,17 +5,15 @@ import RecBox from "../../UI/RecBox/RecBox";
 import styles from "./HomePage.module.css";
 
 export default function HomePage() {
-  return (
-    <div className={styles.homePage}>
-      <div className={styles.container}>
-        <HomeSlider />
+	return (
+		<section className={styles.homePage}>
+			<HomeSlider />
 
-        <ProdList>Хиты продаж</ProdList>
+			<ProdList>Хиты продаж</ProdList>
 
-        <RecBox />
+			<RecBox />
 
-        <ProdList></ProdList>
-      </div>
-    </div>
-  );
+			<ProdList></ProdList>
+		</section>
+	);
 }

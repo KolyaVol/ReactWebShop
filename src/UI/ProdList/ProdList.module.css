@@ -3,30 +3,33 @@
     display: flex;
     max-width: 70vw;
     min-height: 50vh;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    padding: 0;
 
 }
 
 .prods__title {
     font-size: 2rem;
     font-family: 'Titan One', cursive;
-    margin-left: 5vw;
+    
     cursor: default;
 }
 
 .prod__item {
     display: grid;
-    grid-template-columns: repeat(5vw, 2vw, 3vw);
+    grid-template-columns: repeat(5fr, 2fr, 3fr);
     grid-template-rows: 16vh 4vh 4vh;
     grid-template-areas:
         'img img img'
         'pr sl sl'
         'name name name';
+        gap: auto;
     border-radius: 2rem;
     height: 24vh;
-    min-width: 8rem;
-    width: 9vw;
+    min-width: 10rem;
+    width: 10vw;
+    max-width: 15rem;
     font-size: 1.4rem;
     margin: 1rem;
     cursor: pointer;
