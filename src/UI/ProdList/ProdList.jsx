@@ -7,9 +7,9 @@ export default function ProdList({...props}) {
   const router = useNavigate()
   const prodList = useSelector((state) => state.prodList);
   return (
-    <section>
+    <section className={styles.prods}>
       <h3 className={styles.prods__title}>{props.children}</h3>
-      <ul className={styles.prod__list}>
+      <ul className={styles.prods__list}>
         {prodList.prods.map((prod) => (
           <li
             key={prod.id + "prod"}

@@ -1,12 +1,17 @@
-.prod__list {
-    margin: auto;
-    display: flex;
-    max-width: 70vw;
-    min-height: 50vh;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    padding: 0;
+.prods {
+    width: 70%;
+}
 
+.prods__list {
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(10vw,10rem));
+    grid-column-gap: 2rem;
+    grid-row-gap: 0;
+    justify-content: center;
+    min-height: 50vh;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 .prods__title {
@@ -29,46 +34,41 @@
     height: 24vh;
     min-width: 10rem;
     width: 10vw;
-    max-width: 15rem;
+    max-width: 14rem;
     font-size: 1.4rem;
-    margin: 1rem;
     cursor: pointer;
-
 }
 
+
+
 .image {
+    grid-area: img;
     border-radius: 0.7rem;
     background: linear-gradient(217deg, rgba(47, 4, 236, 0.8), rgba(255, 0, 0, 0) 70.71%),
             linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
             linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
-    width: 100%;
-    grid-area: img;
 }
 
 .price {
-    display: block;
+    grid-area: pr;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 700;
-    grid-area: pr;
-    
-
 }
 
 .sale {
-    display: block;
+    grid-area: sl;
     color: gainsboro;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-weight: 200;
-    grid-area: sl;
     text-decoration: line-through;
 }
 
 .name {
-    display: block;
+    grid-area: name;
     color: gainsboro;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    grid-area: name;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
+

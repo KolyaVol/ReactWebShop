@@ -27,7 +27,7 @@ export default function Burger() {
   };
 
   return (
-    <IconContext.Provider value={{ size: "1.5rem" }}>
+    <IconContext.Provider value={{ size: "2rem" }}>
       <PopUp
         classes={styles.PopUpContent}
         visible={burgerVisible}

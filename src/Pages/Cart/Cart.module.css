@@ -1,17 +1,13 @@
 .Cart {
-    margin: 12rem 0 -2rem;
-    position: relative;
-    min-height: 100vh;
+   position: relative;
     display: flex;
-    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 12rem 0 -2rem;
+    min-height: 100vh;
     border-radius: 2rem;
     background-color: #fff;
-    box-sizing: border-box;
-}
-
-.container {
-    margin: 2rem 15vw;
-    min-height: 20vh;
+    box-sizing: border-box;   
 }
 
 .title {
@@ -51,12 +47,11 @@
     margin: 0 0 10rem 1rem;
 }
 
-
 .cart__title {
     font-size: 2rem;
     font-family: 'Titan One', cursive;
-    margin-left: 1rem;
-    color: cornflowerblue;
+    margin: 2rem ;
+    color: #000;
 }
 
 .cart__item {
