@@ -1,74 +1,76 @@
 .prods {
-    width: 70%;
+	width: 70%;
 }
 
 .prods__list {
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(10vw,10rem));
-    grid-column-gap: 2rem;
-    grid-row-gap: 0;
-    justify-content: center;
-    min-height: 50vh;
-    padding: 0;
-    box-sizing: border-box;
+	margin: auto;
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(10vw, 20rem));
+	grid-column-gap: 2rem;
+	grid-row-gap: 0;
+	justify-content: center;
+	min-height: 50vh;
+	padding: 0;
+	box-sizing: border-box;
+    list-style-type: none;
 }
 
 .prods__title {
-    font-size: 2rem;
-    font-family: 'Titan One', cursive;
-    
-    cursor: default;
+	font-size: 2rem;
+	font-family: "Titan One", cursive;
+
+	cursor: default;
 }
 
 .prod__item {
-    display: grid;
-    grid-template-columns: repeat(5fr, 2fr, 3fr);
-    grid-template-rows: 16vh 4vh 4vh;
-    grid-template-areas:
-        'img img img'
-        'pr sl sl'
-        'name name name';
-        gap: auto;
-    border-radius: 2rem;
-    height: 24vh;
-    min-width: 10rem;
-    width: 10vw;
-    max-width: 14rem;
-    font-size: 1.4rem;
-    cursor: pointer;
+	display: grid;
+	grid-template-columns: repeat(5fr, 2fr, 3fr);
+	grid-template-rows: 16fr 4fr 4fr;
+	grid-template-areas:
+		"img img img"
+		"pr sl sl"
+		"name name name";
+	gap: auto;
+	border-radius: 2rem;
+	min-height: 30vh;
+	min-width: 10rem;
+	width: max-content;
+	max-width: 14rem;
+	font-size: 1.4rem;
+	cursor: pointer;
+    
 }
 
-
-
-.image {
-    grid-area: img;
-    border-radius: 0.7rem;
-    background: linear-gradient(217deg, rgba(47, 4, 236, 0.8), rgba(255, 0, 0, 0) 70.71%),
-            linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
-            linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
+.prod__image {
+	grid-area: img;
+	border-radius: 0.7rem;
+	width: 70%;
+	height: 70%;
+	padding: 1rem;
+	object-fit: cover;
+	align-self: center;
+	justify-self: center;
 }
 
 .price {
-    grid-area: pr;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
+	grid-area: pr;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: 700;
 }
 
 .sale {
-    grid-area: sl;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
-    text-decoration: line-through;
+	grid-area: sl;
+	color: gainsboro;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: 200;
+	text-decoration: line-through;
 }
 
 .name {
-    grid-area: name;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	grid-area: name;
+	color: gainsboro;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
-
