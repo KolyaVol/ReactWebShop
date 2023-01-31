@@ -1,23 +1,20 @@
 import { createSlice } from "@reduxjs/toolkit";
-import refrig1 from "../images/refrig1.png";
-import refrig2 from "../images/refrig2.png";
-import refrig3 from "../images/refrig3.png";
-import refrig4 from "../images/refrig4.png";
-import washer1 from "../images/washer1.png";
-import washer2 from "../images/washer2.png";
-import fan1 from "../images/fan1.png";
-import fan2 from "../images/fan2.png";
-import keyboard from "../images/keyboard.png";
-import lamp1 from "../images/lamp1.png";
-import lamp2 from "../images/lamp2.png";
-import microwave1 from "../images/microwave1.png";
-import microwave2 from "../images/microwave2.png";
-import notebook from "../images/notebook.png";
-import robo from "../images/robo-cleaner.png";
-import teapot from "../images/teapot.png";
-import TV1 from "../images/TV1.png";
-import TV2 from "../images/TV2.png";
-import toaster from "../images/toaster.png";
+import nitro1 from "../images/Nitro1.jpg";
+import refrSamsung1 from "../images/refrSamsung1.jpg";
+import LG1 from "../images/LG1.jpg";
+import vacuumSamsung1 from "../images/vacuumSamsung1.jpg";
+import washingSumsung1 from "../images/washingSumsung1.jpg";
+import mcwSamsung1 from "../images/mcwSamsung1.jpg";
+import acusticSven1 from "../images/acusticSven1.jpg";
+import aresa1 from "../images/aresa1.jpg";
+import clock1 from "../images/clock1.jpg";
+import cofe1 from "../images/cofe1.jpg";
+import meat1 from "../images/meat1.jpg";
+import miPoco1 from "../images/miPoco1.jpg";
+import sandv1 from "../images/sandv1.jpg";
+import yandex1 from "../images/yandex1.jpg";
+
+
 
 const prodListSlice = createSlice({
 	name: "prodList",
@@ -25,7 +22,7 @@ const prodListSlice = createSlice({
 		prods: [
 			{
 				id: 1,
-				image: refrig1,
+				image: nitro1,
 				price: 567,
 				sale: "",
 				type: "монитор",
@@ -34,7 +31,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 2,
-				image: lamp1,
+				image: refrSamsung1,
 				price: 426,
 				sale: 479,
 				type: "монитор",
@@ -43,7 +40,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 3,
-				image: microwave1,
+				image: LG1,
 				price: 928,
 				sale: 1054,
 				type: "монитор",
@@ -52,7 +49,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 4,
-				image: fan1,
+				image: vacuumSamsung1,
 				price: 432,
 				sale: 322,
 				type: "монитор",
@@ -61,7 +58,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 5,
-				image: fan2,
+				image: washingSumsung1,
 				price: 232,
 				sale: 322,
 				type: "холодильник",
@@ -70,7 +67,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 6,
-				image: lamp2,
+				image: mcwSamsung1,
 				price: 233,
 				sale: 322,
 				type: "холодильник",
@@ -79,7 +76,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 7,
-				image: teapot,
+				image: miPoco1,
 				price: 234,
 				sale: 322,
 				type: "холодильник",
@@ -88,7 +85,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 8,
-				image: toaster,
+				image: aresa1,
 				price: 235,
 				sale: 322,
 				type: "холодильник",
@@ -97,7 +94,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 9,
-				image: keyboard,
+				image: clock1,
 				price: 236,
 				sale: 322,
 				type: "вентилятор",
@@ -106,7 +103,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 10,
-				image: microwave2,
+				image: cofe1,
 				price: 237,
 				sale: 322,
 				type: "вентилятор",
@@ -115,7 +112,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 11,
-				image: notebook,
+				image: meat1,
 				price: 238,
 				sale: 322,
 				type: "вентилятор",
@@ -124,7 +121,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 12,
-				image: refrig2,
+				image: sandv1,
 				price: 239,
 				sale: 322,
 				type: "вентилятор",
@@ -133,7 +130,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 13,
-				image: washer1,
+				image: yandex1,
 				price: 240,
 				sale: 322,
 				type: "телевизор",
@@ -142,7 +139,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 14,
-				image: TV1,
+				image: acusticSven1,
 				price: 241,
 				sale: 322,
 				type: "телевизор",
