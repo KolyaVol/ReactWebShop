@@ -13,7 +13,7 @@ export default function HomePage() {
 
 			<RecBox />
 
-			<ProdList></ProdList>
+			
 		</section>
 	);
 }

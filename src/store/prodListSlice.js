@@ -1,20 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit";
-import nitro1 from "../images/Nitro1.jpg";
-import refrSamsung1 from "../images/refrSamsung1.jpg";
-import LG1 from "../images/LG1.jpg";
-import vacuumSamsung1 from "../images/vacuumSamsung1.jpg";
-import washingSumsung1 from "../images/washingSumsung1.jpg";
-import mcwSamsung1 from "../images/mcwSamsung1.jpg";
-import acusticSven1 from "../images/acusticSven1.jpg";
-import aresa1 from "../images/aresa1.jpg";
-import clock1 from "../images/clock1.jpg";
-import cofe1 from "../images/cofe1.jpg";
-import meat1 from "../images/meat1.jpg";
-import miPoco1 from "../images/miPoco1.jpg";
-import sandv1 from "../images/sandv1.jpg";
-import yandex1 from "../images/yandex1.jpg";
-
-
 
 const prodListSlice = createSlice({
 	name: "prodList",
@@ -22,7 +6,14 @@ const prodListSlice = createSlice({
 		prods: [
 			{
 				id: 1,
-				image: nitro1,
+				image: [
+					"../images/Nitro1.jpg",
+					"../images/Nitro2.jpg",
+					"../images/Nitro3.jpg",
+					"../images/Nitro4.jpg",
+					"../images/Nitro5.jpg",
+					"../images/Nitro6.jpg",
+				],
 				price: 567,
 				sale: "",
 				type: "монитор",
@@ -31,7 +22,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 2,
-				image: refrSamsung1,
+				image: [
+					"../images/refrSamsung1.jpg",
+					"../images/refrSamsung2.jpg",
+					"../images/refrSamsung3.jpg",
+					"../images/refrSamsung4.jpg",
+					"../images/refrSamsung5.jpg",
+					"../images/refrSamsung6.jpg",
+				],
 				price: 426,
 				sale: 479,
 				type: "монитор",
@@ -40,7 +38,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 3,
-				image: LG1,
+				image: [
+					"../images/LG1.jpg",
+					"../images/LG2.jpg",
+					"../images/LG3.jpg",
+					"../images/LG4.jpg",
+					"../images/LG5.jpg",
+					"../images/LG6.jpg",
+				],
 				price: 928,
 				sale: 1054,
 				type: "монитор",
@@ -49,7 +54,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 4,
-				image: vacuumSamsung1,
+				image: [
+					"../images/vacuumSamsung1.jpg",
+					"../images/vacuumSamsung2.jpg",
+					"../images/vacuumSamsung3.jpg",
+					"../images/vacuumSamsung4.jpg",
+					"../images/vacuumSamsung5.jpg",
+					"../images/vacuumSamsung6.jpg",
+				],
 				price: 432,
 				sale: 322,
 				type: "монитор",
@@ -58,7 +70,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 5,
-				image: washingSumsung1,
+				image: [
+					"../images/washingSumsung1.jpg",
+					"../images/washingSumsung2.jpg",
+					"../images/washingSumsung3.jpg",
+					"../images/washingSumsung4.jpg",
+					"../images/washingSumsung5.jpg",
+					"../images/washingSumsung6.jpg",
+				],
 				price: 232,
 				sale: 322,
 				type: "холодильник",
@@ -67,7 +86,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 6,
-				image: mcwSamsung1,
+				image: [
+					"../images/mcwSamsung1.jpg",
+					"../images/mcwSamsung2.jpg",
+					"../images/mcwSamsung3.jpg",
+					"../images/mcwSamsung4.jpg",
+					"../images/mcwSamsung5.jpg",
+					"../images/mcwSamsung6.jpg",
+				],
 				price: 233,
 				sale: 322,
 				type: "холодильник",
@@ -76,7 +102,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 7,
-				image: miPoco1,
+				image: [
+					"../images/aresa1.jpg",
+					"../images/aresa2.jpg",
+					"../images/aresa3.jpg",
+					"../images/aresa4.jpg",
+					"../images/aresa5.jpg",
+					"../images/aresa6.jpg",
+				],
 				price: 234,
 				sale: 322,
 				type: "холодильник",
@@ -85,7 +118,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 8,
-				image: aresa1,
+				image: [
+					"../images/acusticSven1.jpg",
+					"../images/acusticSven2.jpg",
+					"../images/acusticSven3.jpg",
+					"../images/acusticSven4.jpg",
+					"../images/acusticSven5.jpg",
+					"../images/acusticSven6.jpg",
+				],
 				price: 235,
 				sale: 322,
 				type: "холодильник",
@@ -94,7 +134,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 9,
-				image: clock1,
+				image: [
+					"../images/clock1.jpg",
+					"../images/clock2.jpg",
+					"../images/clock3.jpg",
+					"../images/clock4.jpg",
+					"../images/clock5.jpg",
+					"../images/clock6.jpg",
+				],
 				price: 236,
 				sale: 322,
 				type: "вентилятор",
@@ -103,7 +150,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 10,
-				image: cofe1,
+				image: [
+					"../images/cofe1.jpg",
+					"../images/cofe2.jpg",
+					"../images/cofe3.jpg",
+					"../images/cofe4.jpg",
+					"../images/cofe5.jpg",
+					"../images/cofe6.jpg",
+				],
 				price: 237,
 				sale: 322,
 				type: "вентилятор",
@@ -112,7 +166,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 11,
-				image: meat1,
+				image: [
+					"../images/meat1.jpg",
+					"../images/meat2.jpg",
+					"../images/meat3.jpg",
+					"../images/meat4.jpg",
+					"../images/meat5.jpg",
+					"../images/meat6.jpg",
+				],
 				price: 238,
 				sale: 322,
 				type: "вентилятор",
@@ -121,7 +182,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 12,
-				image: sandv1,
+				image: [
+					"../images/asus1.jpg",
+					"../images/asus2.jpg",
+					"../images/asus3.jpg",
+					"../images/asus4.jpg",
+					"../images/asus5.jpg",
+					"../images/asus6.jpg",
+				],
 				price: 239,
 				sale: 322,
 				type: "вентилятор",
@@ -130,7 +198,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 13,
-				image: yandex1,
+				image: [
+					"../images/yandex1.jpg",
+					"../images/yandex2.jpg",
+					"../images/yandex3.jpg",
+					"../images/yandex4.jpg",
+					"../images/yandex5.jpg",
+					"../images/yandex6.jpg",
+				],
 				price: 240,
 				sale: 322,
 				type: "телевизор",
@@ -139,7 +214,14 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 14,
-				image: acusticSven1,
+				image: [
+					"../images/miPoco1.jpg",
+					"../images/miPoco2.jpg",
+					"../images/miPoco3.jpg",
+					"../images/miPoco4.jpg",
+					"../images/miPoco5.jpg",
+					"../images/miPoco6.jpg",
+				],
 				price: 241,
 				sale: 322,
 				type: "телевизор",

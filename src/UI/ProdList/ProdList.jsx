@@ -16,7 +16,7 @@ export default function ProdList({ ...props }) {
 						onClick={() => router(`/prod/${prod.id}`)}
 						className={styles.prod__item}
 					>
-						<img src={prod.image} alt="" className={styles.prod__image} />
+						<img src={prod.image[0]} alt="" className={styles.prod__image} />
 
 						<span className={styles.price}>{prod.price}</span>
 
