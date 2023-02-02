@@ -1,5 +1,16 @@
+html body {
+    font-size: 10px;
+    margin: 0;
+}
+
 .app {
     display: flex;
     flex-direction: column;
+}
 
+
+@media (min-width: 1500px) {
+html body {
+    font-size: 20px;
+}
 }
