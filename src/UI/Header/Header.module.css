@@ -21,6 +21,9 @@
 		"burger logo search  sign basket";
 }
 
+html {
+	font-size: 10px;
+}
 
 @media (max-width: 900px) {
 	.header {
