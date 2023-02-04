@@ -60,7 +60,7 @@
 
 .sale {
 	grid-area: sl;
-	color: gainsboro;
+	color: #aaa;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: 200;
 	text-decoration: line-through;
@@ -68,7 +68,7 @@
 
 .name {
 	grid-area: name;
-	color: gainsboro;
+	color: #555;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	white-space: nowrap;
 	overflow: hidden;

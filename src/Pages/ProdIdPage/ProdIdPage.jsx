@@ -93,18 +93,40 @@ export default function Login() {
 					</div>
 				</div>
 			</div>
-			<section className={styles.description}> <h3>fgdfgd</h3>
-			<p>gfdgdgdfgdggggggggggdg dfgdfgdfg dgdfgd dfgd dfgdfgd dgdfgdb dfgdfgdg</p></section>
-			<div className={styles.purchase}>
+			<table className={styles.description}>
+				{" "}
+				<caption>Основные характеристики</caption>
+				<tr>
+					<td>{currentProd.descript[0]}</td> <td>{currentProd.descript[1]}</td>
+				</tr>
+				<tr>
+					<td>{currentProd.descript[2]}</td> <td>{currentProd.descript[3]}</td>
+				</tr>
+				<tr>
+					<td>{currentProd.descript[4]}</td> <td>{currentProd.descript[5]}</td>
+				</tr>
+				<tr>
+					<td>{currentProd.descript[6]}</td> <td>{currentProd.descript[7]}</td> 
+				</tr>
+				
+			</table>
+			<section className={styles.purchase}>
 				<div className={styles.prices}>
-					<div className={styles.price}>{currentProd.price}</div>
-					<div className={styles.sale}>{currentProd.sale}</div>
+					<span className={styles.price}>{currentProd.price}</span>
+					<span className={styles.sale}>{currentProd.sale}</span>
+					{currentProd.sale ? (
+						<span className={styles.differ}>
+							-{currentProd.sale - currentProd.price}
+						</span>
+					) : (
+						""
+					)}
 				</div>
 				<MyButton style={styles.btn} onClick={() => addProdToCart()}>
 					add to cart
 				</MyButton>
 				<MyButton onClick={() => addAndGoToCart()}>buy</MyButton>
-			</div>
+			</section>
 		</div>
 	);
 }
