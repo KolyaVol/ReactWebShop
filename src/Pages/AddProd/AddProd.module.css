@@ -4,12 +4,13 @@
     display: flex;
     flex-direction: column;
     margin: 12rem 0 -2rem;
-    padding: 0 30vw;
+    padding: 5rem 30vw;
     position: relative;
     justify-content: center;
     border-radius: 2rem;
     background-color: #fff;
     box-sizing: border-box;
+    
 }
 
 .charItem {
@@ -21,16 +22,11 @@
 .charTitle {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 1.5rem;
-    color: aquamarine;
+    color: #000;
     margin: 0 0 0 1rem;
 }
 
-.charTitle:first-child {
-    margin: 1rem 0 0 1rem;
-}
-
 .input {
-background: linear-gradient(217deg, rgba(47, 4, 236, 0.8), rgba(255, 0, 0, 0) 70.71%),
-        linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
-        linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
+    background: transparent;
+box-shadow: 0 0 2rem #555;
 }

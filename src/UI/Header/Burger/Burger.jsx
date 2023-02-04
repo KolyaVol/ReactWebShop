@@ -17,8 +17,13 @@ export default function Burger() {
 
   const refrig = usePosts(prodList.prods, "", "холодильник");
   const tv = usePosts(prodList.prods, "", "телевизор");
-  const fan = usePosts(prodList.prods, "", "вентилятор");
-  const monitor = usePosts(prodList.prods, "", "монитор");
+  const vacum = usePosts(prodList.prods, "", "пылесос");
+  const wash = usePosts(prodList.prods, "", "стирал");
+  const note = usePosts(prodList.prods, "", "ноутбук");
+  const phone = usePosts(prodList.prods, "", "смарт");
+  const acustic = usePosts(prodList.prods, "", "станция");
+  const mcwave = usePosts(prodList.prods, "", "микроволновая печь");
+  
 
   const clickHandler = (smth) => {
     dispatch(filteredProds(smth));
@@ -27,23 +32,27 @@ export default function Burger() {
   };
 
   return (
-    <IconContext.Provider value={{ size: "2rem" }}>
-      <PopUp
-        classes={styles.PopUpContent}
-        visible={burgerVisible}
-        setVisible={setBurgerVisible}
-        position="left"
-      >
-        <nav>
-          <p onClick={() => clickHandler(refrig)}>Холодильники</p>
-          <p onClick={() => clickHandler(tv)}>Телевизоры</p>
-          <p onClick={() => clickHandler(fan)}>Вентиляторы</p>
-          <p onClick={() => clickHandler(monitor)}>Мониторы</p>
-        </nav>
-      </PopUp>
-      <div onClick={() => setBurgerVisible(true)} className={styles.burger}>
-        <SlMenu />
-      </div>
-    </IconContext.Provider>
-  );
+		<IconContext.Provider value={{ size: "2rem" }}>
+			<PopUp
+				classes={styles.PopUpContent}
+				visible={burgerVisible}
+				setVisible={setBurgerVisible}
+				position="left"
+			>
+				<nav>
+					<p onClick={() => clickHandler(refrig)}>Холодильники</p>
+					<p onClick={() => clickHandler(tv)}>Телевизоры</p>
+					<p onClick={() => clickHandler(vacum)}>Пылесосы</p>
+					<p onClick={() => clickHandler(wash)}>Стиральные машины</p>
+					<p onClick={() => clickHandler(note)}>Ноутбуки</p>
+					<p onClick={() => clickHandler(phone)}>Смартфоны</p>
+					<p onClick={() => clickHandler(acustic)}>Акустические станции</p>
+					<p onClick={() => clickHandler(mcwave)}>Микроволновые печи</p>
+				</nav>
+			</PopUp>
+			<div onClick={() => setBurgerVisible(true)} className={styles.burger}>
+				<SlMenu />
+			</div>
+		</IconContext.Provider>
+	);
 }

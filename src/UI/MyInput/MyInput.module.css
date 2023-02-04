@@ -1,5 +1,4 @@
 .MyInput {
-    background-color: cornflowerblue;
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
     min-width: 20em;
@@ -12,6 +11,6 @@
 }
 
 .MyInput::placeholder {
-    color: azure;
+    color: #555;
 }
 

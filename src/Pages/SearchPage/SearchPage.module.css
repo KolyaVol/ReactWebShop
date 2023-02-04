@@ -1,103 +1,97 @@
 .SearchPage {
-    margin: 12rem 0 -2rem;
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    border-radius: 2rem;
-    background-color: #fff;
-    box-sizing: border-box;
+	margin: 12rem 0 -2rem;
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	border-radius: 2rem;
+	background-color: #fff;
+	box-sizing: border-box;
 }
 
 .sort {
-    text-align: left;
-    margin: 1rem 15vw;
-    display: flex;
-    font-size: 1.5rem;  
+	text-align: left;
+	margin: 1rem 15vw;
+	display: flex;
+	font-size: 1.5rem;
 }
 
 .sort__title {
-    margin: 0 1vw;
-    color: lightblue;
+	margin: 0 1vw;
+	color: #555;
 }
 .sort__type {
-    cursor: pointer;
-    margin: 0 1rem;
-    transition: all 0.2s;
+	cursor: pointer;
+	margin: 0 1rem;
+	transition: all 0.2s;
 }
 
 .sort__type:hover {
-    transition: all 0.2s;
-    color: aqua;
+	transition: all 0.2s;
+	color: aqua;
 }
 
 .sort__type:active {
-    color: aqua;
+	color: aqua;
 }
 .prod__list {
-    margin: 0 15vw;
-    display: flex;
-    width: 70vw;
-    min-height: 50vh;
-    justify-content: center;
-    flex-wrap: wrap;
-
+	margin: 3rem 15vw;
+	display: flex;
+	width: 70vw;
+	min-height: 50vh;
+	justify-content: center;
+	flex-wrap: wrap;
 }
 
 .prods__title {
-    font-size: 2rem;
-    font-family: 'Titan One', cursive;
-    margin-left: 15vw;
+	font-size: 2rem;
+	font-family: "Titan One", cursive;
+	margin-left: 15vw;
 }
 
 .prod__item {
-    display: grid;
-    grid-template-columns: repeat(3, 1rf);
-    grid-template-rows: 10rem 2rem 2rem;
-    grid-template-areas:
-        'img img img'
-        'pr sl sl'
-        'name name name';
-    border-radius: 2rem;
-    height: 14rem;
-    width: 10rem;
-    font-size: 1.4rem;
-    margin: 1rem;
-    cursor: pointer;
-
+	display: grid;
+	grid-template-columns: repeat(3, 1rf);
+	grid-template-rows: 10rem 2rem 2rem;
+	grid-template-areas:
+		"img img img"
+		"pr sl sl"
+		"name name name";
+	border-radius: 2rem;
+	height: 14rem;
+	width: 10rem;
+	font-size: 1.4rem;
+	margin: 1rem;
+	cursor: pointer;
 }
 
 .image {
-    border-radius: 0.7rem;
-    background-color: cornflowerblue;
-    width: 100%;
-    grid-area: img;
+	grid-area: img;
+	width: 100%;
 }
 
 .price {
-    display: block;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 700;
-    grid-area: pr;
-
-
+	grid-area: pr;
+	display: block;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: 700;
 }
 
 .sale {
-    display: block;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-weight: 200;
-    grid-area: sl;
-    text-decoration: line-through;
+	display: block;
+	color: #555;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-weight: 200;
+	grid-area: sl;
+	text-decoration: line-through;
 }
 
 .name {
-    display: block;
-    color: gainsboro;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    grid-area: name;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+	display: block;
+	color: #555;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	grid-area: name;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }

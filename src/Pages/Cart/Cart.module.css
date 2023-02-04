@@ -96,7 +96,8 @@
 
 .cart__name {
     display: block;
-    color: gainsboro;
+    width: 40rem;
+    color: #555;
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 

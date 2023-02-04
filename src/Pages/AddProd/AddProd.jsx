@@ -20,7 +20,6 @@ export default function AddProd() {
           <MyInput classes ={styles.input} required placeholder={`Введите ${char}`}></MyInput>
         </div>
       ))}
-      <input type='submit'></input>
     </form>
   );
 }

@@ -7,6 +7,7 @@ import CartCounter from "../../UI/CartCounter/CartCounter";
 
 export default function Cart() {
 	const cartProds = useSelector((state) => state.addToCart);
+	const prodsArr = useSelector((state) => state.prodList.prods);
 	const router = useNavigate();
 
 	let uniqueArr = cartProds.prods.filter(function (prod, index) {
@@ -33,10 +34,12 @@ export default function Cart() {
 			{cartProds.prods[0] ? (
 				uniqueArr.map((prod) => (
 					<div key={prod.id + "prod"} className={styles.cart__item}>
-						<div
+						<img
+							src={prodsArr[prod.id - 1].image[0]}
+							alt=""
 							className={styles.cart__image}
 							onClick={() => router(`/prod/${prod.id}`)}
-						></div>
+						/>
 						<div
 							className={styles.cart__description}
 							onClick={() => router(`/prod/${prod.id}`)}

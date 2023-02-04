@@ -27,8 +27,8 @@ const prodListSlice = createSlice({
 					"Память:",
 					"ОЗУ 8 ГБ DDR4 , SSD 512 ГБ",
 				],
-				type: "монитор",
-				manufacturer: "Sumsong",
+				type: "Игровой ноутбук",
+				manufacturer: "Acer",
 			},
 			{
 				id: 2,
@@ -188,7 +188,7 @@ const prodListSlice = createSlice({
 			},
 			{
 				id: 8,
-				name: "Акустическая система SVEN MS-2070",
+				name: "Акустическая станция SVEN MS-2070",
 				image: [
 					"../images/acusticSven1.jpg",
 					"../images/acusticSven2.jpg",
