@@ -49,13 +49,7 @@
 	width: 5rem;
 	height: 5rem;
 	border-radius: 50%;
-	background: linear-gradient(
-			217deg,
-			rgba(47, 4, 236, 0.8),
-			rgba(255, 0, 0, 0) 70.71%
-		),
-		linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
-		linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
+	background-color: #aaa;
 	color: #fff;
 	display: flex;
 	justify-content: center;

@@ -106,9 +106,8 @@ export default function Login() {
 					<td>{currentProd.descript[4]}</td> <td>{currentProd.descript[5]}</td>
 				</tr>
 				<tr>
-					<td>{currentProd.descript[6]}</td> <td>{currentProd.descript[7]}</td> 
+					<td>{currentProd.descript[6]}</td> <td>{currentProd.descript[7]}</td>
 				</tr>
-				
 			</table>
 			<section className={styles.purchase}>
 				<div className={styles.prices}>
@@ -122,10 +121,12 @@ export default function Login() {
 						""
 					)}
 				</div>
-				<MyButton style={styles.btn} onClick={() => addProdToCart()}>
+				<MyButton styles={styles.btn} onClick={() => addProdToCart()}>
 					add to cart
 				</MyButton>
-				<MyButton onClick={() => addAndGoToCart()}>buy</MyButton>
+				<MyButton styles={styles.btn} onClick={() => addAndGoToCart()}>
+					buy
+				</MyButton>
 			</section>
 		</div>
 	);

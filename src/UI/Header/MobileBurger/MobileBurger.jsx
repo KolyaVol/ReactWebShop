@@ -19,8 +19,12 @@ export default function MobileBurger() {
 
 	const refrig = usePosts(prodList.prods, "", "холодильник");
 	const tv = usePosts(prodList.prods, "", "телевизор");
-	const fan = usePosts(prodList.prods, "", "вентилятор");
-	const monitor = usePosts(prodList.prods, "", "монитор");
+	const vacum = usePosts(prodList.prods, "", "пылесос");
+	const wash = usePosts(prodList.prods, "", "стирал");
+	const note = usePosts(prodList.prods, "", "ноутбук");
+	const phone = usePosts(prodList.prods, "", "смарт");
+	const acustic = usePosts(prodList.prods, "", "станция");
+	const mcwave = usePosts(prodList.prods, "", "микроволновая печь");
 
 	const userName = useSelector((state) => state.userName);
 	const isAuth = useSelector((state) => state.isAuth);
@@ -128,10 +132,14 @@ export default function MobileBurger() {
 						</div>
 					</div>
 
-					<h3 onClick={() => clickHandler(refrig)}>Холодильники</h3>
-					<h3 onClick={() => clickHandler(tv)}>Телевизоры</h3>
-					<h3 onClick={() => clickHandler(fan)}>Вентиляторы</h3>
-					<h3 onClick={() => clickHandler(monitor)}>Мониторы</h3>
+					<p onClick={() => clickHandler(refrig)}>Холодильники</p>
+					<p onClick={() => clickHandler(tv)}>Телевизоры</p>
+					<p onClick={() => clickHandler(vacum)}>Пылесосы</p>
+					<p onClick={() => clickHandler(wash)}>Стиральные машины</p>
+					<p onClick={() => clickHandler(note)}>Ноутбуки</p>
+					<p onClick={() => clickHandler(phone)}>Смартфоны</p>
+					<p onClick={() => clickHandler(acustic)}>Акустические станции</p>
+					<p onClick={() => clickHandler(mcwave)}>Микроволновые печи</p>
 				</nav>
 			</PopUp>
 			<span onClick={() => setBurgerVisible(true)}></span>

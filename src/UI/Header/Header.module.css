@@ -3,11 +3,11 @@
 	position: absolute;
 	background: linear-gradient(
 			217deg,
-			rgba(47, 4, 236, 0.8),
-			rgba(255, 0, 0, 0) 70.71%
+			rgba(44, 9, 243, 0.8),
+			rgba(250, 241, 241, 0) 70.71%
 		),
-		linear-gradient(336deg, rgba(204, 0, 255, 0.8), rgba(0, 255, 0, 0) 70.71%),
-		linear-gradient(127deg, rgba(47, 4, 236, 0.8), rgba(0, 0, 255, 0) 70.71%);
+		linear-gradient(336deg, rgba(77, 13, 196, 0.8), rgba(0, 255, 0, 0) 70.71%),
+		linear-gradient(127deg, rgba(243, 9, 9, 0.8), rgba(0, 0, 255, 0) 70.71%);
 	width: 100vw;
 	min-height: 15rem;
 	font-size: 1.6rem;
@@ -32,7 +32,6 @@ html {
 		grid-template-areas:
 			"logo logo logo logo logo "
 			"search search .  . mobileBurger";
-			padding-top: 2rem;
+		padding-top: 2rem;
 	}
 }
-
