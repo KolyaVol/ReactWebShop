@@ -120,3 +120,7 @@
 .space {
     height: 10rem;
 }
+
+input {
+    color: #000;
+}

@@ -1,13 +1,11 @@
 import React, { useState } from "react";
 import styles from "./HomeSlider.module.css";
-import ha from "./ha.jpg";
-import ah from "./ah.jpg";
 
 export default function HomeSlider() {
   let [sliderItems, setSliderItems] = useState([
-    { img: ha, id: 1 },
-    { img: ah, id: 2 },
-  ]);
+		{ img: "../images/sales1.jpg", id: 1 },
+		{ img: "../images/sales2.jpg", id: 2 },
+	]);
   let [item, setItem] = useState(1);
   return (
       <div className={styles.slider__box}>
