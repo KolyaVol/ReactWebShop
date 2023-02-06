@@ -163,3 +163,7 @@ font-size: 1.5rem;
 .btn {
 	background-color: rgba(243, 9, 9);
 }
+
+td {
+	border-bottom: 1px solid #aaa;
+}

@@ -6,6 +6,7 @@
     align-items: center;
     text-decoration: none;
     color: #fff;
+    font-size: 2rem;
     font-family: 'Titan One', cursive;
     
 }
@@ -25,8 +26,8 @@
     width: 1rem;
     text-align: center;
     font-family: 'Titan One', cursive;
-    padding: 0.1rem;
     font-size: 1rem;
+    padding: 0.1rem;
 }
 
 @media (max-width: 901px) {

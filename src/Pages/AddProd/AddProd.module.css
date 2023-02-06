@@ -1,36 +1,35 @@
 .addProd {
-    margin: 12rem 15vw -2rem;
-    min-height: 33vh;
-    display: flex;
-    flex-direction: column;
-    margin: 12rem 0 -2rem;
-    padding: 5rem 30vw;
-    position: relative;
-    justify-content: center;
-    border-radius: 2rem;
-    background-color: #fff;
-    box-sizing: border-box;
-    
+	margin: 12rem 15vw -2rem;
+	min-height: 33vh;
+	display: flex;
+	flex-direction: column;
+	margin: 12rem 0 -2rem;
+	padding: 5rem 30vw;
+	position: relative;
+	justify-content: center;
+	border-radius: 2rem;
+	background-color: #fff;
+	box-sizing: border-box;
 }
 
 .charItem {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1rem;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 1rem;
 }
 
 .charTitle {
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    font-size: 1.5rem;
-    color: #000;
-    margin: 0 0 0 1rem;
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 1.5rem;
+	color: #000;
+	margin: 0 0 0 1rem;
 }
 
 .input {
-    background: transparent;
-box-shadow: 0 0 2rem #555;
+	background: transparent;
+	box-shadow: 0 0 2rem #555;
 }
 
 .input::placeholder {
-    color: #555;;
+	color: #555;
 }

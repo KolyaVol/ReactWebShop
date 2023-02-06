@@ -4,8 +4,8 @@ import styles from "./RecBox.module.css";
 
 export default function RecBox() {
   let [rec, setRec] = useState([
-		{ id: 1, img: "../../images/PocoSale.jpg", bgc: "blue" },
-		{ id: 2, img: "../images/TradeIn.png", bgc: "pink" },
+		{ id: 1, img: "../../images/skidki1.jpg", bgc: "blue" },
+		{ id: 2, img: "../images/skidki2.jpg", bgc: "pink" },
 	]);
   return (
     <div>

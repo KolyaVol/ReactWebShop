@@ -36,7 +36,6 @@
 	min-width: 10rem;
 	width: max-content;
 	max-width: 14rem;
-	font-size: 1.4rem;
 	cursor: pointer;
     
 }
@@ -56,6 +55,7 @@
 	grid-area: pr;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: 700;
+	font-size: 2rem;
 }
 
 .sale {
@@ -63,12 +63,14 @@
 	color: #aaa;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-weight: 200;
+	font-size: 2rem;
 	text-decoration: line-through;
 }
 
 .name {
 	grid-area: name;
 	color: #555;
+	font-size: 2rem;
 	font-family: Georgia, "Times New Roman", Times, serif;
 	white-space: nowrap;
 	overflow: hidden;

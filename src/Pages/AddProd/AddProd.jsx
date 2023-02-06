@@ -4,13 +4,12 @@ import MyInput from "../../UI/MyInput/MyInput";
 
 export default function AddProd() {
   let charArr = [
-    "id",
-    "image",
-    "price",
-    "sale",
-    "type",
-    "manufacturer",
-    "name",
+    "Добавить картинку",
+    "Цена со скидкой",
+    "Цена до скидки",
+    "Тип товара",
+    "Производитель",
+    "Название товара",
   ];
   return (
     <form className={styles.addProd}>

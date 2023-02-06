@@ -1,28 +1,22 @@
 .city {
-    display: flex;
-    justify-content: center;
-    grid-area: city;
-    cursor: pointer;
-    color: #fff;
-    font-family: 'Titan One', cursive;
-    font-size: 1.4rem;
-    text-decoration: none;
+	grid-area: city;
+	display: flex;
+	justify-content: center;
+	cursor: pointer;
+	color: #fff;
+    font-size: 2rem;
+	font-family: "Titan One", cursive;
+	text-decoration: none;
 }
 
 .PopUpContentCent {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-width: 33vw;
-    min-height: 33vh;
-    background-color: #fff;
-    border-radius: 2rem;
-    font-size: 1.5rem;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+	min-width: 33vw;
+	min-height: 33vh;
+	border-radius: 2rem;
 }
 
 @media (max-width: 901px) {
-    .city {
-        display: none;
-    }
+	.city {
+		display: none;
+	}
 }

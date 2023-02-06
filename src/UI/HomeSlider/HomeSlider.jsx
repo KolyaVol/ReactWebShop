@@ -4,7 +4,7 @@ import styles from "./HomeSlider.module.css";
 export default function HomeSlider() {
   let [sliderItems, setSliderItems] = useState([
 		{ img: "../images/sales1.jpg", id: 1 },
-		{ img: "../images/sales2.jpg", id: 2 },
+		{ img: "../images/note123.jpg", id: 2 },
 	]);
   let [item, setItem] = useState(1);
   return (

@@ -7,6 +7,10 @@
     display: block;
 }
 
+h3 {
+    font-size: 2rem;
+}
+
 @media (max-width: 901px) {
     .sell {
         display: none;

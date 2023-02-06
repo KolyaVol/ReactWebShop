@@ -122,10 +122,10 @@ export default function Login() {
 					)}
 				</div>
 				<MyButton styles={styles.btn} onClick={() => addProdToCart()}>
-					add to cart
+					В корзину
 				</MyButton>
 				<MyButton styles={styles.btn} onClick={() => addAndGoToCart()}>
-					buy
+					Купить
 				</MyButton>
 			</section>
 		</div>

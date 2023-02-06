@@ -31,7 +31,7 @@ export default function UserPage() {
 					<div className={styles.UserPic}>{firstLetter()}</div>
 					<h3 className={styles.UserName}>{userName.firstName}</h3>
 				</div>
-				<MyButton onClick={signOut}>Выйти</MyButton>
+				<MyButton styles={styles.btn} onClick={signOut}>Выйти</MyButton>
 			</div>
 			<div className={styles.myCards}>
 				<h3>Мои карты</h3>
