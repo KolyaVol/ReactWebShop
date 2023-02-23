@@ -9,6 +9,10 @@
 	text-decoration: none;
 }
 
+.map {
+	border-radius: 50%;
+}
+
 .PopUpContentCent {
 	min-width: 33vw;
 	min-height: 33vh;

@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { usePosts } from "../../../hooks/usePosts";
 import { filteredProds } from "../../../store/prodFilterSlice";
-import Map from "../../Map/Map";
+import { YMaps, Map, Placemark } from "@pbe/react-yandex-maps";
 import PopUp from "../../PopUp/PopUp";
 import styles from "./MobileBurger.module.css";
 
@@ -14,8 +14,11 @@ export default function MobileBurger() {
 	const cartProds = useSelector((state) => state.addToCart);
 	let [mapVisible, setMapVisible] = useState(false);
 	let [currChoice, setCurrChoice] = useState("BYN");
-
 	const [burgerVisible, setBurgerVisible] = useState(false);
+	const defaultState = {
+		center: [55.751574, 37.573856],
+		zoom: 5,
+	};
 
 	const refrig = usePosts(prodList.prods, "", "холодильник");
 	const tv = usePosts(prodList.prods, "", "телевизор");
@@ -101,7 +104,11 @@ export default function MobileBurger() {
 						setVisible={setMapVisible}
 						position="centered"
 					>
-						<Map></Map>
+						<YMaps apikey="bb5c9df0-b0e3-4173-bd47-b875de8b659f" preload={true}>
+							<Map defaultState={defaultState}>
+								<Placemark geometry={[55.684758, 37.738521]} />
+							</Map>
+						</YMaps>
 					</PopUp>
 					<h3 onClick={() => setMapVisible(true)} className={styles.city}>
 						Минск
