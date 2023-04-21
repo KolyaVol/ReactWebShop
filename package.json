@@ -1,7 +1,7 @@
 {
   "name": "webshop",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "@pbe/react-yandex-maps": "^1.2.2",
     "@reduxjs/toolkit": "^1.9.0",
