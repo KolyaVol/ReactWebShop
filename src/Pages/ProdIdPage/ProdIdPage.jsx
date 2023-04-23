@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useNavigate, useParams } from "react-router-dom";
-import { addToCart } from "../../store/cartSlice";
+import { addToCart } from "../../store/CartSlice";
 import MyButton from "../../UI/MyButton/MyButton";
 import styles from "./ProdIdPage.module.css";
 

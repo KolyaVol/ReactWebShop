@@ -4,7 +4,7 @@ import {
   addToCart,
   removeCartProd,
   removeOneProd,
-} from "../../store/cartSlice";
+} from "../../store/CartSlice";
 import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import styles from "./CartCounter.module.css";
 

@@ -1,6 +1,6 @@
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import prodListSlice from './prodListSlice'
-import CartSlice from './cartSlice'
+import CartSlice from './CartSlice'
 import isAuthSlice from './isAuthSlice'
 import userNameSlice from './userNameSlice'
 import prodFilterSlice from './prodFilterSlice'

@@ -8,7 +8,7 @@ import Burger from "./Burger/Burger";
 import Logo from "./Logo/Logo";
 import UserProfile from "./UserProfile/UserProfile";
 import HeaderCart from "./HeaderCart/HeaderCart";
-import { pasteCartArr } from "../../store/cartSlice";
+import { pasteCartArr } from "../../store/CartSlice";
 import { userStateName } from "../../store/userNameSlice";
 import styles from "./Header.module.css";
 import Search from "./Search/Search";
