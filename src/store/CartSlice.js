@@ -16,7 +16,7 @@ const cartSlice = createSlice({
             state.prods = state.prods.filter(prod => prod.id !== action.payload)
         },
         removeOneProd(state, action) {
-            state.prods = state.prods.filter((prod, index) => state.prods.findIndex(prod => prod.id == action.payload) !== index)
+            state.prods = state.prods.filter((prod, index) => state.prods.findIndex(prod => prod.id === action.payload) !== index)
         }
     }
 })
