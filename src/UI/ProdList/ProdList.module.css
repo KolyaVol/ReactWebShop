@@ -5,7 +5,7 @@
 .prods__list {
 	margin: auto;
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(10vw, 20rem));
+	grid-template-columns: repeat(auto-fill, minmax(15vw, 20rem));
 	grid-column-gap: 2rem;
 	grid-row-gap: 0;
 	justify-content: center;
@@ -18,7 +18,6 @@
 .prods__title {
 	font-size: 2rem;
 	font-family: "Titan One", cursive;
-
 	cursor: default;
 }
 
@@ -32,12 +31,15 @@
 		"name name name";
 	gap: auto;
 	border-radius: 2rem;
+	padding: 1rem;
 	min-height: 30vh;
 	min-width: 10rem;
 	width: max-content;
 	max-width: 14rem;
 	cursor: pointer;
-    
+}
+.prod__item:hover {
+	box-shadow: inset 0 0 3px 3px #c7c0c0;
 }
 
 .prod__image {
