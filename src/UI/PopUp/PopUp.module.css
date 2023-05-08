@@ -1,26 +1,31 @@
 .PopUp {
-    background-color: rgba(0,0,0,0.4);
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100vw;
-    height: 100vh;
-    display: none;
-    z-index: 100;
+  background-color: rgba(0, 0, 0, 0.4);
+  position: fixed;
+  left: -100vw;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  z-index: 100;
+  transition: 0.25s;
 }
 
 .PopUp.active {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  left: 0;
+  transition: 0.5s;
 }
 
 body .lock {
-    overflow: hidden;
+  overflow: hidden;
 }
 
-.centered {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.PopUp.centered {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 0;
+  transition: 0.5s;
 }

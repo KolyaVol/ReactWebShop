@@ -11,7 +11,7 @@ export default function PopUp({
   const rootClasses = [styles.PopUp];
   if (visible) {
     if (position === "left") {
-      rootClasses.push(styles.active,);
+      rootClasses.push(styles.active);
     }
     else rootClasses.push(styles.centered);
   }

@@ -23,34 +23,38 @@ export default function SearchPage() {
     dispatch(filteredProds(nameSort));
   };
   return (
-		<div className={styles.SearchPage}>
-			<div className={styles.sort}>
-				<p className={styles.sort__title}>Сортировать по: </p>
-				<p onClick={() => sortByPrice()} className={styles.sort__type}>
-					цене{" "}
-				</p>
-				<p onClick={() => sortByName()} className={styles.sort__type}>
-					названию{" "}
-				</p>
-			</div>
+    <section className={styles.SearchPage}>
+      <section className={styles.sort}>
+        <p className={styles.sort__title}>Сортировать по: </p>
+        <p onClick={() => sortByPrice()} className={styles.sort__type}>
+          цене{" "}
+        </p>
+        <p onClick={() => sortByName()} className={styles.sort__type}>
+          названию{" "}
+        </p>
+      </section>
 
-			<div className={styles.prod__list}>
-				{sortedAndFilteredProds.prods.map((prod) => (
-					<div
-						key={prod.id + "prod"}
-						onClick={() => router(`/prod/${prod.id}`)}
-						className={styles.prod__item}
-					>
-						<img src={prod.image[0]} alt="" className={styles.image} />
+      <main className={styles.prod__list}>
+        {sortedAndFilteredProds.prods.length > 0 ? (
+          sortedAndFilteredProds.prods.map((prod) => (
+            <section
+              key={prod.id + "prod"}
+              onClick={() => router(`/prod/${prod.id}`)}
+              className={styles.prod__item}
+            >
+              <img src={prod.image[0]} alt="" className={styles.image} />
 
-						<div className={styles.price}>{prod.price}</div>
+              <div className={styles.price}>{prod.price}</div>
 
-						<div className={styles.sale}>{prod.sale}</div>
+              <div className={styles.sale}>{prod.sale}</div>
 
-						<div className={styles.name}>{prod.name}</div>
-					</div>
-				))}
-			</div>
-		</div>
-	);
+              <div className={styles.name}>{prod.name}</div>
+            </section>
+          ))
+        ) : (
+          <h2>Данный отвар отсутствует в каталоге</h2>
+        )}
+      </main>
+    </section>
+  );
 }

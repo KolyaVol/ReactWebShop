@@ -1,169 +1,167 @@
 .prodIdPage {
-	position: relative;
-    display: grid;
-    grid-template-columns: 15vw 28rem auto 15vw 15vw;
-	grid-template-rows: 12rem max-content 10rem;
-	grid-template-areas: 
-	'. prodId__title prodId__title prodId__title .' 
-	'. photo__box prodId__descr prodId__buyProd .'
-	'. photo__box prodId__descr prodId__buyProd .'
-	;
-	grid-gap: 2rem;
-    margin: 12rem 0 -2rem;
-	width: 100vw;
-    height: max-content;
-    border-radius: 2rem;
-    background-color: #fff;
-    box-sizing: border-box;      
+  position: relative;
+  display: grid;
+  grid-template-columns: 15vw 28rem auto 15vw 15vw;
+  grid-template-rows: 12rem max-content 10rem;
+  grid-template-areas:
+    ". prodId__title prodId__title prodId__title ."
+    ". photo__box prodId__descr prodId__buyProd ."
+    ". photo__box prodId__descr prodId__buyProd .";
+  grid-gap: 2rem;
+  margin: 12rem 0 -2rem;
+  width: 100vw;
+  height: max-content;
+  border-radius: 2rem;
+  background-color: #fff;
+  box-sizing: border-box;
 }
 
 .prodId__title {
-	grid-area: prodId__title;
-	font-size: 3rem;
+  grid-area: prodId__title;
+  font-size: 3rem;
 }
 
 .photo__box {
-	grid-area: photo__box;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 100%;
+  grid-area: photo__box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
 }
 
 .photo__arr {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: space-evenly;
-	margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-right: 0.5rem;
 }
 
 .photo__arr img {
-	display: block;
-	min-width: 3rem;
-	max-width: 3vw;
-	margin: 1rem;
+  display: block;
+  min-width: 3rem;
+  max-width: 3vw;
+  margin: 1rem;
 }
 
 .current__photo {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-	border-radius: 2rem;
-	width: 20rem;
-	height: 100%;
-    overflow: hidden
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 2rem;
+  width: 20rem;
+  height: 100%;
+  overflow: hidden;
 }
 
 .current__photo_container {
-	display: flex;
-    justify-content: start;
-	position: relative;
-    width: 0;
-    transition: all 1s;
+  display: flex;
+  justify-content: flex-start;
+  position: relative;
+  width: 0;
+  transition: all 1s;
 }
 
 .current__photo_container img {
-    width: 20rem; 
-	margin-right: 2rem;
+  width: 20rem;
+  margin-right: 2rem;
 }
 
 .first_img {
-    left: 0rem;
+  left: 0rem;
 }
 
 .second_img {
-    left: -22rem;
+  left: -22rem;
 }
 .third_img {
-    left: -44rem;
+  left: -44rem;
 }
 .forth_img {
-    left: -66rem;
+  left: -66rem;
 }
 .fifth_img {
-    left: -88rem;
+  left: -88rem;
 }
 
 .description {
-	grid-area: prodId__descr;
-	width:100%;
-	height: max-content;
+  grid-area: prodId__descr;
+  width: 100%;
+  height: max-content;
 }
 
 .description > caption {
-	font-size: 3rem;
-	font-weight: 700;
+  font-size: 3rem;
+  font-weight: 700;
 }
 
 .description > tr {
-	font-size: 2rem;
-	margin-bottom: 1rem;
-	
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .purchase {
-	grid-area: prodId__buyProd;
-	display: flex;
-	flex-direction: column;
-	position: relative;
-	border-radius: 2rem;
-	box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
-	width: 100%;
-	height: 12rem;
-	padding: 1rem;
+  grid-area: prodId__buyProd;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
+  width: 100%;
+  height: 12rem;
+  padding: 1rem;
 }
 
 .prices {
-	display: flex;
-	justify-content: space-evenly;
-	align-items: center;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .price {
-	margin: 0 0.5rem 0 1rem;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-weight: 200;
-	font-size: 2rem;
+  margin: 0 0.5rem 0 1rem;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 200;
+  font-size: 2rem;
 }
 
 .sale {
-	font-size: 1.5rem;
-	color: gainsboro;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-weight: 200;
-	text-decoration: line-through;
+  font-size: 1.5rem;
+  color: gainsboro;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 200;
+  text-decoration: line-through;
 }
 
 .differ {
-font-size: 1.5rem;
-	color: red;
-	font-family: Georgia, "Times New Roman", Times, serif;
-	font-weight: 200;
-	margin-left: -1rem;
+  font-size: 1.5rem;
+  color: red;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: 200;
+  margin-left: -1rem;
 }
 
 @media (max-width: 900px) {
-	.prodIdPage {
-		grid-template-columns: 15vw 1fr 15vw;
-	grid-template-rows: repeat(4, max-content);
-	grid-template-areas: 
-	'. prodId__title .' 
-	'. photo__box .'
-	'. prodId__descr .'
-	'. prodId__buyProd  .'
-	;
-	justify-items: center;
-	}
-	.purchase {
-		margin: 3rem 0;
-		width: 30vw;}
+  .prodIdPage {
+    grid-template-columns: 15vw 1fr 15vw;
+    grid-template-rows: repeat(4, max-content);
+    grid-template-areas:
+      ". prodId__title ."
+      ". photo__box ."
+      ". prodId__descr ."
+      ". prodId__buyProd  .";
+    justify-items: center;
+  }
+  .purchase {
+    margin: 3rem 0;
+    width: 30vw;
+  }
 }
 
 .btn {
-	background-color: rgba(243, 9, 9);
+  background-color: rgba(243, 9, 9);
 }
 
 td {
-	border-bottom: 1px solid #aaa;
+  border-bottom: 1px solid #aaa;
 }
