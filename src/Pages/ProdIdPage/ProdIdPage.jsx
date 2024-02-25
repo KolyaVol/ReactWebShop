@@ -6,7 +6,7 @@ import { addToCart } from "../../store/CartSlice";
 import MyButton from "../../UI/MyButton/MyButton";
 import styles from "./ProdIdPage.module.css";
 
-export default function Login() {
+export default function ProdIdPage() {
   const [currImg, setCurrImg] = useState(1);
 
   const router = useNavigate();
@@ -35,8 +35,7 @@ export default function Login() {
   };
 
   const addAndGoToCart = () => {
-    dispatch(addToCart(currentProd));
-    addToLs();
+    addProdToCart();
     router("/cart");
   };
   return (
